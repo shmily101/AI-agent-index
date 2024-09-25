@@ -1,18 +1,13 @@
 <template>
-  <div class="home-content">
+  <div class="h-screen bg-black bg-cover">
     <!-- 页面内容 -->
+     <img class="w-[78.43vw]" src="~/assets/img/home-bg1@3x.png" />
   </div>
 </template>
   
-  <script setup lang="ts">
+<script setup lang="ts">
 // 页面逻辑
 </script>
   
 <style scoped>
-.home-content {
-  min-height: 100vh;
-  background: url("https://ik.imagekit.io/k0jemnbco/Main_Page_New/image_102_copy.webp")
-    no-repeat center center fixed;
-  background-size: cover;
-}
 </style>
