@@ -10,10 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@unocss/reset": "^0.62.4",
     "nuxt": "^3.13.0",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
     "sass": "^1.79.3",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "^0.62.4",
+    "@unocss/preset-rem-to-px": "^0.62.4",
+    "unocss": "^0.62.4"
   }
 }
