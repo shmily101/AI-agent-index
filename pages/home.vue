@@ -2,7 +2,7 @@
   <div>
     <section id="section-agent" h-screen bg="black cover" flex text-white items-center font-medium>
       <!-- 页面内容 -->
-       <div class="section-wrapper" w-920 m="y-0 auto" flex="~ col" items-center>
+       <div class="section-wrapper" w-920 m="y-0 auto" flex="~ col" items-center transition="duration-1s delay-0.5s">
         <img w-644 h-full block src="~/assets/img/home-s1-bg.png" />
         <div w-full flex="~ col" items-center justify-center relative z-20>
           <h1 class="section-agent-gradient section-name" font-extrabold text-72 tracking-wider mb-14 leading-tight transition-duration-1s op-0>Agent Power</h1>
@@ -45,7 +45,7 @@ onMounted(() => {
   
   &.animated {
     .section-wrapper {
-      // transform: translate3d(0, -60px, 0);
+      transform: translate3d(0, -30px, 0);
     }
     .section-name {
       opacity: 1;
