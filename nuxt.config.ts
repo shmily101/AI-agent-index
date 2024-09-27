@@ -5,6 +5,19 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
   ],
+  app: {
+    // head: {
+    //   link: [
+    //     {
+    //       rel: "preload",
+    //       href: "/_nuxt/assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2",
+    //       crossorigin: "anonymous",
+    //       as: "font",
+    //       type: "font/woff2"
+    //     },
+    //   ]
+    // },
+  },
   postcss: {
     plugins: {
       'postcss-px-to-viewport-8-plugin': {
