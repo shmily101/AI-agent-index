@@ -92,18 +92,54 @@
       <img w-screen h-screen block src="~/assets/img/home-s7-bg.png" />
       
       <div absolute left-0 top-50% transform -translate-y-50% m="y-0 auto" flex items-center px-170 transition="duration-1s delay-0.5s">
-        <div text-24 flex="~ col" items-center>
+        <div class="fade-trigger fade-copy" text-24 flex="~ col" items-center>
           <h1 text-72>您可能想知道</h1>
-          <p mt-24>这里没有想要了解的问题？您可以现在就<span text-primary font-bold mx-8>联系我们</span>！</p>
-          <p mt-8>我们将为您提供免费的咨询服务。</p>
+          <p text="#E5E5E5" mt-24>这里没有想要了解的问题？您可以现在就<span text-primary font-bold mx-8>联系我们</span>！</p>
+          <p text="#E5E5E5" mt-8>我们将为您提供免费的咨询服务。</p>
         </div>
-        <div>cardlist</div>
+        <div class="fade-trigger fade-copy" flex="~ col" text-18 ml-200>
+          <div
+            v-for="(card, index) in cards"
+            :key="index"
+            w-700 bg="#212121 cover" shadow="[0px_3px_49px_9px_rgba(0,0,0,0.06)]" backdrop-blur-20px text-white m-15 border-rd-10 cursor-pointer overflow-hidden max-h-90px
+            :class="['card', { expanded: card.expanded }]"
+            @click="toggleCard(index)"
+          >
+            <div flex justify-between items-center m="x-25 y-15">
+              <span>卡片 {{ index + 1 }}</span>
+              <span>
+                <img v-show="card.expanded" w-20 src="~/assets/svg/chevron-down.svg" />
+                <img v-show="!card.expanded" w-20 src="~/assets/svg/chevron-up.svg" />
+              </span>
+            </div>
+            <div v-if="card.expanded" m="x-25 y-15" transition="opacity duration-0.3s">
+              这是卡片 {{ index + 1 }} 的内容。
+            </div>
+          </div>
+        </div>
+
+        
       </div>
     </section>
   </div>
 </template>
   
 <script setup lang="ts">
+
+const cards = ref([
+      { expanded: true, },
+      { expanded: false },
+      { expanded: false },
+      { expanded: false },
+    ]);
+
+    const toggleCard = (index) => {
+      cards.value = cards.value.map((card, i) => ({
+        ...card,
+        expanded: i === index ? !card.expanded : false,
+      }));
+    };
+
 // 页面逻辑
 const { $gsap: gsap } = useNuxtApp();
 
@@ -171,16 +207,15 @@ onMounted(() => {
 </script>
   
 <style lang="scss" scoped>
-  .fade-copy {
-    transition: opacity 0.5s, transform 0.5s;
-    transform: translateY(50px);
-    opacity: 0;
-    &.active {
-      transform: translateY(0px);
-      opacity: 1;
-    }
+.fade-copy {
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(50px);
+  opacity: 0;
+  &.active {
+    transform: translateY(0px);
+    opacity: 1;
   }
-
+}
 
 #section-agent {
   .section-agent-gradient {
@@ -215,6 +250,13 @@ onMounted(() => {
     img + img {
       margin-left: 24px;
     }
+  }
+}
+
+#section-FAQ {
+  .expanded {
+    background-color: blue;
+    max-height: 300px;
   }
 }
 </style>
