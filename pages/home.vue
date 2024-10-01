@@ -91,13 +91,13 @@
     <section id="section-FAQ" min-h-100vh h-auto bg="black cover" text-white items-center font-medium relative>
       <img w-screen h-screen block src="~/assets/img/home-s7-bg.png" />
       
-      <div absolute left-0 top-50% transform -translate-y-50% m="y-0 auto" flex items-center px-170 transition="duration-1s delay-0.5s">
-        <div class="fade-trigger fade-copy" text-24 flex="~ col" items-center>
+      <div class="fade-trigger fade-copy" absolute left-0 top-30% m="y-0 auto" flex items-center px-170 transition="duration-1s delay-0.5s">
+        <div text-24 flex="~ col" items-center>
           <h1 text-72>您可能想知道</h1>
-          <p text="#E5E5E5" mt-24>这里没有想要了解的问题？您可以现在就<span text-primary font-bold mx-8>联系我们</span>！</p>
+          <p text="#E5E5E5" mt-24>这里没有想要了解的问题？您可以现在就<span text="#326CF9" font-bold mx-10>联系我们</span>！</p>
           <p text="#E5E5E5" mt-8>我们将为您提供免费的咨询服务。</p>
         </div>
-        <div class="fade-trigger fade-copy" flex="~ col" text-18 ml-200>
+        <div flex="~ col" text-18 ml-200>
           <div
             v-for="(card, index) in cards"
             :key="index"
@@ -117,10 +117,18 @@
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
+
+    <section id="section-user" w-screen relative bg="black cover" p="t-200 b-80">
+      <img class="fade-trigger fade-copy" w-screen block src="~/assets/img/home-s8-bg.png" />
+
+      <div flex="~ col" w-screen tracking-wide items-center absolute left-50% top-50% transform -translate-y-50% -translate-x-50% text="white 62">
+        <p id="text-one"></p>
+        <p mt-15 id="text-two"></p>
+      </div>
+    </section>
+    
   </div>
 </template>
   
@@ -153,6 +161,27 @@ const agentFn = () => {
     },
   });
 };
+
+const userFn = () => {
+  gsap.timeline({
+        scrollTrigger: {
+          trigger: '#section-user',
+          start: 'top center',
+          end: 'bottom center',
+          toggleActions: 'play none none none'
+        }
+      })
+      .to('#text-one', {
+        text: { value: '已有多家企业选择使用Agent power赋能业务' },
+        duration: 3,
+        ease: 'none'
+      })
+      .to('#text-two', {
+        text: { value: '感谢大家的支持与认可' },
+        duration: 1,
+        ease: 'none'
+      }, '+=0.5'); // 延迟0.5秒开始第二段文字
+}
 
 const initScrollAnimation = () => {
   const card = document.getElementById("section-scroll-card"),
@@ -202,6 +231,7 @@ onMounted(() => {
   agentFn()
   initScrollAnimation();
   triggerFn();
+  userFn();
 })
 
 </script>

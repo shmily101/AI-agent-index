@@ -14,7 +14,7 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: '#326CF9', // 设置主色调
+      primary: '#0000FF', // 设置主色调
       gray: '#383838'
     },
   },
