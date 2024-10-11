@@ -3,7 +3,7 @@
     <img src="~/assets/svg/logo.svg" />
     <ul flex justify-center items-center ml-10>
       <li mr-40 hover:text-primary><NuxtLink to="/">首页</NuxtLink></li>
-      <li mr-40 hover:text-primary><NuxtLink to="https://gallery.xieyufei.com/case/honor">服务</NuxtLink></li>
+      <li mr-40 hover:text-primary><NuxtLink to="/service">服务</NuxtLink></li>
       <li mr-40 hover:text-primary><NuxtLink to="/">行业</NuxtLink></li>
       <li mr-40 hover:text-primary><NuxtLink to="/">关于我们</NuxtLink></li>
       <li hover:text-primary><NuxtLink to="/">新闻资讯</NuxtLink></li>
