@@ -8,7 +8,7 @@
       z-2
       text-center
     >
-      <div h-[200vh] relative z-1>
+      <div h="200vh" relative z-1>
         <div
           flex="~ wrap"
           items-center

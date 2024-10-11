@@ -43,7 +43,7 @@
           </p>
         </div>
       </div>
-      <p absolute bottom-40 left-50% transform -translate-x-50% text-16>
+      <p absolute bottom-40 left="50%" transform="translate-x--50%" text-16>
         ↓ 下滑查看
       </p>
     </section>
@@ -62,8 +62,8 @@
           </p>
 
           <div id="section-scroll-card" w-screen overflow-hidden mt-60>
-            <div translate-x-100%>
-              <div w-3675 translate-x--100%>
+            <div transform="translate-x-100%">
+              <div w-3675 transform="translate-x--100%">
                 <div id="section-scroll-card-top" flex class="section-picture">
                   <img
                     class="lazyload"
@@ -284,11 +284,9 @@
         tracking-wide
         items-center
         absolute
-        left-50%
-        top-50%
-        transform
-        -translate-y-50%
-        -translate-x-50%
+        left="50%"
+        top="50%"
+        transform="translate-y--50% translate-x--50%"
         text="white 62"
       >
         <p id="text-one"></p>
