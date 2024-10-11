@@ -34,7 +34,6 @@
           </h1>
           <p
             class="section-slogan"
-            font-bold
             text-36
             d="0 60px 0"
             transition="duration-0.5s delay-0.5s"
@@ -51,34 +50,14 @@
 
     <section
       id="section-card"
-      relative
-      max-h-100vh
-      h-auto
-      bg="#FAFAFC cover"
+      py-200
+      class="bg-[url('~/assets/img/home-s2-bg.png')] bg-cover"
       text-gray
     >
       <div m="y-0 auto" transition="duration-1s delay-0.5s">
-        <img
-          w-screen
-          h-screen
-          block
-          object-cover
-          src="~/assets/img/home-s2-bg.png"
-        />
-
-        <div
-          w-screen
-          h-max
-          flex="~ col"
-          items-center
-          absolute
-          left-0
-          top-50%
-          transform
-          -translate-y-50%
-        >
+        <div w-screen h-max flex="~ col" items-center>
           <h1 text-60 mb-14>定制化Agent服务</h1>
-          <p text="24 #808080" d="0 60px 0">
+          <p text="24 #808080" font="300 sans" d="0 60px 0">
             我们的定制化Agent服务，利用人工智能，赋能各行各业
           </p>
 
@@ -88,47 +67,8 @@
                 <div id="section-scroll-card-top" flex class="section-picture">
                   <img
                     class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
+                    v-for="index in 9"
+                    :src="`_nuxt/assets/img/home-s2-card-0${index}.png`"
                     alt=""
                   />
                 </div>
@@ -143,47 +83,8 @@
                 >
                   <img
                     class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
-                    alt=""
-                  />
-                  <img
-                    class="lazyload"
-                    src="~/assets/img/home-s2-card-01.png"
+                    v-for="index in 9"
+                    :src="`_nuxt/assets/img/home-s2-card-0${index}.png`"
                     alt=""
                   />
                 </div>
@@ -303,25 +204,19 @@
 
     <section
       id="section-FAQ"
-      min-h-100vh
-      h-auto
-      bg="black cover"
+      bg="#000 cover"
+      p="t-300 b-200"
       text-white
       items-center
       font-medium
-      relative
     >
-      <img w-screen h-screen block src="~/assets/img/home-s7-bg.png" />
-
       <div
         class="fade-trigger fade-copy"
-        absolute
-        left-0
-        top-30%
         m="y-0 auto"
         flex
         items-center
         px-170
+        min-h-500
         transition="duration-1s delay-0.5s"
       >
         <div text-24 flex="~ col" items-center>
@@ -359,12 +254,12 @@
                 <img
                   v-show="card.expanded"
                   w-20
-                  src="~/assets/svg/chevron-down.svg"
+                  src="~/assets/svg/chevron-up.svg"
                 />
                 <img
                   v-show="!card.expanded"
                   w-20
-                  src="~/assets/svg/chevron-up.svg"
+                  src="~/assets/svg/chevron-down.svg"
                 />
               </span>
             </div>
@@ -380,19 +275,8 @@
       </div>
     </section>
 
-    <section
-      id="section-user"
-      w-screen
-      relative
-      bg="black cover"
-      p="t-200 b-80"
-    >
-      <img
-        class="fade-trigger fade-copy"
-        w-screen
-        block
-        src="~/assets/img/home-s8-bg.png"
-      />
+    <section id="section-user" w-screen relative bg="black cover" py-200>
+      <img w-screen block src="~/assets/img/home-s8-bg.png" />
 
       <div
         flex="~ col"
@@ -447,9 +331,9 @@ const userFn = () => {
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: "#section-user",
-        start: "top center",
-        end: "bottom center",
+        trigger: "#text-one",
+        start: "top bottom",
+        end: "bottom bottom",
         toggleActions: "play none none none",
       },
     })
@@ -506,7 +390,6 @@ const triggerFn = () => {
         trigger: item,
         start: "top " + hook,
         toggleClass: "active",
-        markers: false,
       },
     })
   })
