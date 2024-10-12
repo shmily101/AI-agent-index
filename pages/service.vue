@@ -173,7 +173,7 @@
       text-gray
       flex="~ col"
       items-center
-      class="bg-[url('~/assets/img/service-s3-bg.png')]"
+      class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover"
     >
       <h1 class="fade-trigger" data-hook="90%" text="48" font="300 sans" mb-150>
         提示工程服务的优势
