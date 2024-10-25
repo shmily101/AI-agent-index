@@ -169,16 +169,16 @@
       </ul>
     </section>
     <section
-      p="y-250 x-100"
+      p="y-200 x-100"
       text-gray
       flex="~ col"
       items-center
       class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover"
     >
-      <h1 class="fade-trigger" data-hook="90%" text="48" font="300 sans" mb-150>
+      <h1 class="fade-trigger" data-hook="90%" text="48" font="300 sans" mb-120>
         提示工程服务的优势
       </h1>
-      <ul class="fade-trigger" grid="~ cols-3 rows-2" gap="x-200 y-150" w-full>
+      <ul class="fade-trigger" grid="~ cols-3 rows-2" gap="x-200 y-100" w-full>
         <li
           flex="~ col"
           items-center
@@ -189,6 +189,40 @@
           <img w-40 h-40 :src="item.img" />
           <h2 my-12 text="32">{{ item.title }}</h2>
           <p text="16 #808080" v-html="item.content"></p>
+        </li>
+      </ul>
+    </section>
+    <section
+      p="y-100 x-100"
+      text="#808080"
+      bg="#fff cover"
+      flex="~ col"
+      items-center
+    >
+      <h1
+        class="fade-trigger"
+        data-hook="90%"
+        text="48 gray"
+        font="300 sans"
+        mb-100
+      >
+        我们的服务流程
+      </h1>
+      <ul w-full flex="~ col" items-center>
+        <li>
+          <img w-420 src="~/assets/img/service-s4-01.png" alt="" />
+        </li>
+        <li mr-300>
+          <img w-420 src="~/assets/img/service-s4-02.png" alt="" />
+        </li>
+        <li ml-100>
+          <img w-420 src="~/assets/img/service-s4-03.png" alt="" />
+        </li>
+        <li mr-200>
+          <img w-420 src="~/assets/img/service-s4-04.png" alt="" />
+        </li>
+        <li ml-100>
+          <img w-420 src="~/assets/img/service-s4-05.png" alt="" />
         </li>
       </ul>
     </section>
