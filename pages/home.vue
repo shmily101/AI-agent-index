@@ -103,21 +103,14 @@
       items-center
     >
       <h1 mt-160 text-40 font="300 sans">为什么选择我们？</h1>
-      <div
-        class="fade-trigger fade-copy"
-        flex
-        items-center
-        w-1090
-        mx-auto
-        mt-80
-      >
+      <div class="fade-trigger" flex items-center w-1090 mx-auto mt-80>
         <h2 text-50 font-medium>技术领先</h2>
         <p ml-104 lh-normal text="18 #808080">
           依托最前沿的自然语言处理与大型语言模型技术，我们确保每个项目<br />的技术先进性。
         </p>
       </div>
       <img
-        class="fade-trigger fade-copy"
+        class="fade-trigger"
         w-1235
         h-600
         mx-auto
@@ -135,14 +128,14 @@
       items-center
       pt-200
     >
-      <div class="fade-trigger fade-copy" flex items-center w-1090 mx-auto>
+      <div class="fade-trigger" flex items-center w-1090 mx-auto>
         <h2 text-50 font-medium>深度定制</h2>
         <p ml-104 lh-normal text="18 #808080">
           我们根据客户的具体需求量身定制解决方案，确保与业务目标紧密<br />契合。
         </p>
       </div>
       <img
-        class="fade-trigger fade-copy"
+        class="fade-trigger"
         w-1235
         h-600
         mx-auto
@@ -160,14 +153,14 @@
       items-center
       pt-200
     >
-      <div class="fade-trigger fade-copy" flex items-center w-1090 mx-auto>
+      <div class="fade-trigger" flex items-center w-1090 mx-auto>
         <h2 text-50 font-medium>全流程支持</h2>
         <p ml-104 lh-normal text="18 #808080">
           从概念设计、开发、到后续的维护与优化，我们提供全流程的支持<br />服务，确保您的AI系统长期稳定高效运行。
         </p>
       </div>
       <img
-        class="fade-trigger fade-copy"
+        class="fade-trigger"
         w-1235
         h-600
         mx-auto
@@ -185,14 +178,14 @@
       items-center
       py-200
     >
-      <div class="fade-trigger fade-copy" flex items-center w-1090 mx-auto>
+      <div class="fade-trigger" flex items-center w-1090 mx-auto>
         <h2 text-50 font-medium>业务增长驱动</h2>
         <p ml-104 lh-normal text="18 #808080">
           通过智能化解决方案，帮助您提升业务效率、降低成本，并<br />增强市场竞争力。
         </p>
       </div>
       <img
-        class="fade-trigger fade-copy"
+        class="fade-trigger"
         w-1235
         h-600
         mx-auto
@@ -211,7 +204,7 @@
       font-medium
     >
       <div
-        class="fade-trigger fade-copy"
+        class="fade-trigger"
         m="y-0 auto"
         flex
         items-center
@@ -297,23 +290,8 @@
 </template>
 
 <script setup lang="ts">
-const cards = ref([
-  { expanded: true },
-  { expanded: false },
-  { expanded: false },
-  { expanded: false },
-])
-
-const toggleCard = (index: number) => {
-  cards.value = cards.value.map((card, i) => ({
-    ...card,
-    expanded: i === index ? !card.expanded : false,
-  }))
-}
-
-// 页面逻辑
-const { $gsap: gsap } = useNuxtApp()
-
+const { $gsap: gsap, $triggerFn: triggerFn } = useNuxtApp()
+// 第一屏-首页动画
 const agentFn = () => {
   const sectionAgent = document.getElementById("section-agent")
   console.log("sectionAgent", sectionAgent)
@@ -324,33 +302,7 @@ const agentFn = () => {
     },
   })
 }
-
-const userFn = () => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: "#text-one",
-        start: "top bottom",
-        end: "bottom bottom",
-        toggleActions: "play none none none",
-      },
-    })
-    .to("#text-one", {
-      text: { value: "已有多家企业选择使用Agent power赋能业务" },
-      duration: 3,
-      ease: "none",
-    })
-    .to(
-      "#text-two",
-      {
-        text: { value: "感谢大家的支持与认可" },
-        duration: 1,
-        ease: "none",
-      },
-      "+=0.5"
-    ) // 延迟0.5秒开始第二段文字
-}
-
+// 第二屏-滚动行业卡片
 const initScrollAnimation = () => {
   const card = document.getElementById("section-scroll-card"),
     endHeight = window.innerHeight + card?.clientHeight!
@@ -377,21 +329,44 @@ const initScrollAnimation = () => {
       "<"
     )
 }
-
-const triggerFn = () => {
-  const triggerList = document.querySelectorAll(".fade-trigger")
-  triggerList.forEach((item) => {
-    const hook = item.getAttribute("data-hook") || "70%"
-    console.log(hook, "hook")
-    gsap.timeline({
+// 第四屏-问答卡片
+const cards = ref([
+  { expanded: true },
+  { expanded: false },
+  { expanded: false },
+  { expanded: false },
+])
+const toggleCard = (index: number) => {
+  cards.value = cards.value.map((card, i) => ({
+    ...card,
+    expanded: i === index ? !card.expanded : false,
+  }))
+}
+// 第五屏-已使用用户
+const userFn = () => {
+  gsap
+    .timeline({
       scrollTrigger: {
-        trigger: item,
-        start: "top " + hook,
-        toggleClass: "active",
+        trigger: "#text-one",
+        start: "top bottom",
+        end: "bottom bottom",
+        toggleActions: "play none none none",
       },
     })
-  })
-  console.log(triggerList)
+    .to("#text-one", {
+      text: { value: "已有多家企业选择使用Agent power赋能业务" },
+      duration: 3,
+      ease: "none",
+    })
+    .to(
+      "#text-two",
+      {
+        text: { value: "感谢大家的支持与认可" },
+        duration: 1,
+        ease: "none",
+      },
+      "+=0.5"
+    ) // 延迟0.5秒开始第二段文字
 }
 
 onMounted(() => {
@@ -403,16 +378,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.fade-copy {
-  transition: opacity 0.5s, transform 0.5s;
-  transform: translateY(50px);
-  opacity: 0;
-  &.active {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
 #section-agent {
   .section-agent-gradient {
     background-image: linear-gradient(

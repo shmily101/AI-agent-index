@@ -33,7 +33,6 @@
               xmlns:xlink="http://www.w3.org/1999/xlink"
               ref="magicRingSvg"
             >
-              <!-- 渐变 -->
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop
@@ -193,7 +192,8 @@
       </ul>
     </section>
     <section
-      p="y-100 x-100"
+      id="section-steps"
+      p="t-150 b-300 x-100"
       text="#808080"
       bg="#fff cover"
       flex="~ col"
@@ -208,21 +208,124 @@
       >
         我们的服务流程
       </h1>
-      <ul w-full flex="~ col" items-center>
-        <li>
-          <img w-420 src="~/assets/img/service-s4-01.png" alt="" />
+      <ul w-full flex="~ col" items-center text-20>
+        <li class="step-item" relative>
+          <img
+            class="step-img"
+            w-420
+            op-0
+            src="~/assets/img/service-s4-01.png"
+            alt=""
+          />
+          <div
+            class="step-info"
+            absolute
+            top-20
+            left-350
+            flex
+            items-center
+            gap-12
+            op-0
+          >
+            <hr border-none w-150 h-1 bg="#808080" />
+            <span w-400>了解客户项目需求及目标</span>
+          </div>
         </li>
-        <li mr-300>
-          <img w-420 src="~/assets/img/service-s4-02.png" alt="" />
+        <li class="step-item" mr-300 relative>
+          <img
+            class="step-img"
+            w-420
+            op-0
+            src="~/assets/img/service-s4-02.png"
+            alt=""
+          />
+          <div
+            class="step-info"
+            absolute
+            top-10
+            op-0
+            left="-400"
+            flex
+            items-center
+            gap-12
+          >
+            <span w-300 text-center
+              >根据客户需求，<br />确定最合适的AI模型或框架</span
+            >
+            <hr border-none w-170 h-1 bg="#808080" />
+          </div>
         </li>
-        <li ml-100>
-          <img w-420 src="~/assets/img/service-s4-03.png" alt="" />
+        <li class="step-item" ml-100 relative>
+          <img
+            class="step-img"
+            w-420
+            op-0
+            src="~/assets/img/service-s4-03.png"
+            alt=""
+          />
+          <div
+            class="step-info"
+            absolute
+            top-20
+            left-350
+            flex
+            op-0
+            items-center
+            gap-12
+          >
+            <hr border-none w-150 h-1 bg="#808080" />
+            <span w-350 text-center
+              >Prompt工程师<br />设计符合客户使用情况的定制agent</span
+            >
+          </div>
         </li>
-        <li mr-200>
-          <img w-420 src="~/assets/img/service-s4-04.png" alt="" />
+        <li class="step-item" mr-200 relative>
+          <img
+            class="step-img"
+            w-420
+            op-0
+            src="~/assets/img/service-s4-04.png"
+            alt=""
+          />
+          <div
+            class="step-info"
+            absolute
+            top-10
+            left="-400"
+            op-0
+            flex
+            items-center
+            gap-12
+          >
+            <span w-280 text-center
+              >使用客户的数据微调 AI 模型，<br />以优化性能和准确性</span
+            >
+            <hr border-none w-170 h-1 bg="#808080" />
+          </div>
         </li>
-        <li ml-100>
-          <img w-420 src="~/assets/img/service-s4-05.png" alt="" />
+        <li class="step-item" ml-100 relative>
+          <img
+            class="step-img"
+            w-420
+            op-0
+            src="~/assets/img/service-s4-05.png"
+            alt=""
+          />
+          <div
+            class="step-info"
+            op-0
+            absolute
+            top-20
+            left-350
+            flex
+            items-center
+            gap-12
+          >
+            <hr border-none w-150 h-1 bg="#808080" />
+            <span w-300 text-center
+              >测试和验证AI模型，<br />以确保它们满足客户需求及期望</span
+            >
+          </div>
         </li>
       </ul>
     </section>
@@ -302,25 +405,13 @@ const advantagesList = [
   },
 ]
 
-const { $gsap: gsap, $ScrollTrigger: ScrollTrigger } = useNuxtApp()
+const {
+  $gsap: gsap,
+  $ScrollTrigger: ScrollTrigger,
+  $triggerFn: triggerFn,
+} = useNuxtApp()
 
-const triggerFn = () => {
-  const triggerList = document.querySelectorAll(".fade-trigger")
-  triggerList.forEach((item) => {
-    const hook = item.getAttribute("data-hook") || "70%"
-    console.log(hook, "hook")
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        start: "top " + hook,
-        toggleClass: "active",
-        markers: false,
-      },
-    })
-  })
-  console.log(triggerList)
-}
-
+// 第一屏-svg首页动画
 const magicRingFn = () => {
   const section = document.querySelector("#section-service"),
     wrapper = document.querySelector("#section-wrapper"),
@@ -400,6 +491,7 @@ const magicRingFn = () => {
   })
 }
 
+// 第二屏-卡片轮播图动画
 let intervalId = null
 const cardFn = () => {
   const cards = document.querySelectorAll(".carousel-card")
@@ -431,25 +523,49 @@ const cardFn = () => {
   }, 3000) // 每3秒切换一次
 }
 
+// 第四屏-我们的服务流程动画
+const stepFn = () => {
+  const stepList = document.querySelectorAll(".step-item")
+  stepList.forEach((item) => {
+    const stepImg = item.querySelector(".step-img")
+    const stepInfo = item.querySelector(".step-info")
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top 70%",
+          end: "bottom 100%",
+          scrub: 2,
+          markers: false,
+        },
+      })
+      .fromTo(
+        stepImg,
+        {
+          y: 60,
+        },
+        {
+          y: 0,
+          duration: 0.5,
+          opacity: 1,
+        }
+      )
+      .fromTo(
+        stepInfo,
+        { x: -100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 2 }
+      )
+  })
+}
+
 onMounted(() => {
   magicRingFn()
   cardFn()
   triggerFn()
+  stepFn()
 })
 
 onUnmounted(() => {
   intervalId && clearInterval(intervalId)
 })
 </script>
-
-<style lang="scss" scoped>
-.fade-trigger {
-  transition: opacity 0.5s, transform 0.5s;
-  transform: translateY(50px);
-  opacity: 0;
-  &.active {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-</style>

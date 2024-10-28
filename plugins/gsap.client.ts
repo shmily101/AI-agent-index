@@ -57,7 +57,22 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
   })
 
-  console.log("client ScrollTrigger", ScrollTrigger)
+  function triggerFn() {
+    const triggerList = document.querySelectorAll(".fade-trigger")
+    triggerList.forEach((item) => {
+      const hook = item.getAttribute("data-hook") || "70%"
+      console.log(hook, "hook")
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top " + hook,
+          toggleClass: "active",
+          markers: false,
+        },
+      })
+    })
+    console.log(triggerList)
+  }
 
   return {
     provide: {
@@ -65,6 +80,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       Draggable,
       ScrollTrigger,
       TextPlugin,
+      triggerFn,
     },
   }
 })

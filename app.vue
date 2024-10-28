@@ -12,6 +12,16 @@ import "@unocss/reset/tailwind.css"
 html {
   font-family: AliRegular, sans-serif;
 }
+
+.fade-trigger {
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(50px);
+  opacity: 0;
+  &.active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 </style>
 
 <template>
