@@ -16,6 +16,18 @@ export default defineNuxtConfig({
       ],
     },
   },
+  devServer: {
+    port: 8080,
+  },
+  nitro: {
+    devProxy: {
+      "/proxy": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+      },
+    },
+    plugins: ["@/server/index"],
+  },
   postcss: {
     plugins: {
       "postcss-px-to-viewport-8-plugin": {

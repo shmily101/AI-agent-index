@@ -98,6 +98,7 @@
             ? ['bg-primary', 'text-#fff', 'cursor-pointer']
             : ['bg-#ccc', 'text-gray', 'cursor-not-allowed']
         "
+        @click="handleSubmit"
       >
         提交
       </button>
@@ -132,6 +133,17 @@ const canSubmit = computed(() => {
     userForm.value.info
   )
 })
+
+const handleSubmit = async () => {
+  const response = await useFetch("/proxy/api/user", {
+    server: false,
+    method: "POST",
+    body: {
+      ...userForm.value,
+    },
+  })
+  console.log(response)
+}
 
 onMounted(() => {
   const options = {
