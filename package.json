@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.62.4",
+    "@vueuse/components": "^11.1.0",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
     "gsap": "^3.12.5",
     "nuxt": "^3.13.0",
     "postcss-px-to-viewport-8-plugin": "^1.2.5",
     "sass": "^1.79.3",
+    "typed.js": "^2.1.0",
     "vue": "latest",
     "vue-router": "latest"
   },

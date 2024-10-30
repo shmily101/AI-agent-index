@@ -13,6 +13,11 @@ html {
   font-family: AliRegular, sans-serif;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 .fade-trigger {
   transition: opacity 0.5s, transform 0.5s;
   transform: translateY(50px);

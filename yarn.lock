@@ -1276,6 +1276,11 @@
   resolved "https://registry.npmmirror.com/@types/resolve/-/resolve-1.20.2.tgz"
   integrity sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==
 
+"@types/web-bluetooth@^0.0.20":
+  version "0.0.20"
+  resolved "http://registry.m.jd.com/@types/web-bluetooth/download/@types/web-bluetooth-0.0.20.tgz#f066abfcd1cbe66267cdbbf0de010d8a41b41597"
+  integrity sha1-8Gar/NHL5mJnzbvw3gENikG0FZc=
+
 "@unhead/dom@1.11.6", "@unhead/dom@^1.11.5":
   version "1.11.6"
   resolved "https://registry.npmmirror.com/@unhead/dom/-/dom-1.11.6.tgz"
@@ -1759,6 +1764,48 @@
   version "3.5.8"
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.5.8.tgz"
   integrity sha512-mJleSWbAGySd2RJdX1RBtcrUBX6snyOc0qHpgk3lGi4l9/P/3ny3ELqFWqYdkXIwwNN/kdm8nD9ky8o6l/Lx2A==
+
+"@vueuse/components@^11.1.0":
+  version "11.1.0"
+  resolved "http://registry.m.jd.com/@vueuse/components/download/@vueuse/components-11.1.0.tgz#4e2ea5a4131db4403339de102d130728e721483d"
+  integrity sha1-Ti6lpBMdtEAzOd4QLRMHKOchSD0=
+  dependencies:
+    "@vueuse/core" "11.1.0"
+    "@vueuse/shared" "11.1.0"
+    vue-demi ">=0.14.10"
+
+"@vueuse/core@11.1.0", "@vueuse/core@^11.1.0":
+  version "11.1.0"
+  resolved "http://registry.m.jd.com/@vueuse/core/download/@vueuse/core-11.1.0.tgz#a104f33c899a15f3b28d3eb7b20738501a3a5035"
+  integrity sha1-oQTzPImaFfOyjT63sgc4UBo6UDU=
+  dependencies:
+    "@types/web-bluetooth" "^0.0.20"
+    "@vueuse/metadata" "11.1.0"
+    "@vueuse/shared" "11.1.0"
+    vue-demi ">=0.14.10"
+
+"@vueuse/metadata@11.1.0":
+  version "11.1.0"
+  resolved "http://registry.m.jd.com/@vueuse/metadata/download/@vueuse/metadata-11.1.0.tgz#ad367d2a51d985129724425923b3cf95f0faf27b"
+  integrity sha1-rTZ9KlHZhRKXJEJZI7PPlfD68ns=
+
+"@vueuse/nuxt@^11.1.0":
+  version "11.1.0"
+  resolved "http://registry.m.jd.com/@vueuse/nuxt/download/@vueuse/nuxt-11.1.0.tgz#73b468dfa13f4a158611e86bc9f9ef9799429198"
+  integrity sha1-c7Ro36E/ShWGEehryfnvl5lCkZg=
+  dependencies:
+    "@nuxt/kit" "^3.13.2"
+    "@vueuse/core" "11.1.0"
+    "@vueuse/metadata" "11.1.0"
+    local-pkg "^0.5.0"
+    vue-demi ">=0.14.10"
+
+"@vueuse/shared@11.1.0":
+  version "11.1.0"
+  resolved "http://registry.m.jd.com/@vueuse/shared/download/@vueuse/shared-11.1.0.tgz#3bfc3aa555c2a456c21945ec7f127d71938d12e8"
+  integrity sha1-O/w6pVXCpFbCGUXsfxJ9cZONEug=
+  dependencies:
+    vue-demi ">=0.14.10"
 
 abbrev@1:
   version "1.1.1"
@@ -3381,7 +3428,7 @@ jackspeak@^3.1.2:
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
-"jiti-v1@npm:jiti@^1.21.6":
+"jiti-v1@npm:jiti@^1.21.6", jiti@^1.21.0, jiti@^1.21.6:
   version "1.21.6"
   resolved "https://registry.npmmirror.com/jiti/-/jiti-1.21.6.tgz"
   integrity sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==
@@ -3390,11 +3437,6 @@ jiti@2.0.0-beta.3:
   version "2.0.0-beta.3"
   resolved "https://registry.npmmirror.com/jiti/-/jiti-2.0.0-beta.3.tgz"
   integrity sha512-pmfRbVRs/7khFrSAYnSiJ8C0D5GvzkE4Ey2pAvUcJsw1ly/p+7ut27jbJrjY79BpAJQJ4gXYFtK6d1Aub+9baQ==
-
-jiti@^1.21.0, jiti@^1.21.6:
-  version "1.21.6"
-  resolved "https://registry.npmmirror.com/jiti/-/jiti-1.21.6.tgz"
-  integrity sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -4790,16 +4832,7 @@ streamx@^2.15.0:
   optionalDependencies:
     bare-events "^2.2.0"
 
-"string-width-cjs@npm:string-width@^4.2.0":
-  version "4.2.3"
-  resolved "https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-  dependencies:
-    emoji-regex "^8.0.0"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
-
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4831,14 +4864,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.npmmirror.com/strip-ansi/-/strip-ansi-6.0.1.tgz"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmmirror.com/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -5033,6 +5059,11 @@ type-fest@^3.8.0:
   version "3.13.1"
   resolved "https://registry.npmmirror.com/type-fest/-/type-fest-3.13.1.tgz"
   integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
+
+typed.js@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.m.jd.com/typed.js/download/typed.js-2.1.0.tgz#b97a06111a5f57d6a59acfdd36d4f9b891ee13b4"
+  integrity sha1-uXoGERpfV9alms/dNtT5uJHuE7Q=
 
 ufo@^1.1.2, ufo@^1.4.0, ufo@^1.5.3, ufo@^1.5.4:
   version "1.5.4"
@@ -5381,6 +5412,11 @@ vue-bundle-renderer@^2.1.0:
   dependencies:
     ufo "^1.5.3"
 
+vue-demi@>=0.14.10:
+  version "0.14.10"
+  resolved "http://registry.m.jd.com/vue-demi/download/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
+  integrity sha1-r8eN49b54Rv3jFXoUQ7hKBRSLwQ=
+
 vue-devtools-stub@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/vue-devtools-stub/-/vue-devtools-stub-0.1.0.tgz"
@@ -5448,16 +5484,7 @@ wide-align@^1.1.2:
   dependencies:
     string-width "^1.0.2 || 2 || 3 || 4"
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
-  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
-wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==

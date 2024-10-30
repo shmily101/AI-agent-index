@@ -115,7 +115,7 @@
             </p>
             <div op-0 id="section-link">
               <button w-250 h-50 py-8 my-24 rounded-full bg-primary text-white>
-                讨论您的项目需求→
+                <NuxtLink to="/contact">讨论您的项目需求→</NuxtLink>
               </button>
             </div>
           </div>
@@ -561,8 +561,8 @@ const stepFn = () => {
 onMounted(() => {
   magicRingFn()
   cardFn()
-  triggerFn()
   stepFn()
+  triggerFn()
 })
 
 onUnmounted(() => {

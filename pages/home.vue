@@ -219,7 +219,7 @@
               text="#326CF9"
               font-bold
               mx-10
-              >联系我们</span
+              ><NuxtLink to="/contact">联系我们</NuxtLink></span
             >！
           </p>
           <p text="#E5E5E5" mt-8>我们将为您提供免费的咨询服务。</p>
