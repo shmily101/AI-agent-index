@@ -1,18 +1,5 @@
 <template>
-  <nav
-    flex
-    justify-between
-    items-center
-    fixed
-    top-0
-    left-0
-    p="x-80 y-10"
-    w-screen
-    bg-white
-    z-1000
-    text="gray"
-    class="keep-px-nav"
-  >
+  <nav flex justify-between items-center fixed top-0 left-0 p="x-80 y-10" w-screen bg-white z-1000 text="gray" class="keep-px-nav">
     <img w-60 h-60 src="~/assets/svg/logo.svg" />
     <ul flex gap-40 justify-center items-center>
       <li hover:text-primary><NuxtLink to="/">首页</NuxtLink></li>

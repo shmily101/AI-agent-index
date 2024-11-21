@@ -1,25 +1,12 @@
 <template>
   <div class="intl-tel-input allow-dropdown">
     <div class="flag-container">
-      <div
-        class="selected-flag"
-        :title="currentData.name + ': +' + currentData.dialCode"
-        @click="hideSubMenu = !hideSubMenu"
-      >
+      <div class="selected-flag" :title="currentData.name + ': +' + currentData.dialCode" @click="hideSubMenu = !hideSubMenu">
         <div w-20 h-14 :class="'iti-flag ' + currentData.code"></div>
         <div class="iti-arrow"></div>
       </div>
-      <ul
-        class="country-list"
-        v-if="!hideSubMenu"
-        v-on-click-outside="() => (hideSubMenu = true)"
-      >
-        <li
-          v-for="item in frontCountriesArray"
-          :key="item.id"
-          :class="'country ' + (item.code == currentCode ? 'highlight' : '')"
-          @click="handleSelectCountry(item)"
-        >
+      <ul class="country-list" v-if="!hideSubMenu" v-on-click-outside="() => (hideSubMenu = true)">
+        <li v-for="item in frontCountriesArray" :key="item.id" :class="'country ' + (item.code == currentCode ? 'highlight' : '')" @click="handleSelectCountry(item)">
           <div class="flag-box">
             <div :class="'iti-flag ' + item.code"></div>
           </div>
@@ -27,12 +14,7 @@
           <span class="dial-code">+{{ item.dialCode }}</span>
         </li>
         <li class="divider"></li>
-        <li
-          v-for="item in countriesArray"
-          :key="item.code"
-          :class="'country ' + (item.code == currentCode ? 'highlight' : '')"
-          @click="handleSelectCountry(item)"
-        >
+        <li v-for="item in countriesArray" :key="item.code" :class="'country ' + (item.code == currentCode ? 'highlight' : '')" @click="handleSelectCountry(item)">
           <div class="flag-box">
             <div :class="'iti-flag ' + item.code"></div>
           </div>
@@ -45,8 +27,8 @@
 </template>
 
 <script setup lang="ts">
-import { countries, type CountryCode } from "./countryList"
-import { vOnClickOutside } from "@vueuse/components"
+import { countries, type CountryCode } from './countryList'
+import { vOnClickOutside } from '@vueuse/components'
 
 const props = withDefaults(
   defineProps<{
@@ -60,7 +42,7 @@ const props = withDefaults(
 )
 // 定义事件
 const emit = defineEmits<{
-  (e: "excountry", item: any): void
+  (e: 'excountry', item: any): void
 }>()
 
 // 初始化数据
@@ -107,7 +89,7 @@ watch(
 const setCountry = (item: any) => {
   currentCode.value = item.code
   props.toFront.push(String(item.code) as CountryCode)
-  emit("excountry", item)
+  emit('excountry', item)
 }
 
 // 方法：处理选择国家
@@ -119,12 +101,12 @@ const handleSelectCountry = (item: any) => {
 
 // 组件挂载时触发
 onMounted(() => {
-  emit("excountry", countries[props.countryCode])
+  emit('excountry', countries[props.countryCode])
 })
 </script>
 
 <style lang="scss" scoped>
-@import "intl.css";
+@import 'intl.css';
 
 .intl-tel-input {
   width: 60px;
