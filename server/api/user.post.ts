@@ -2,24 +2,26 @@ import User from "@/server/models/userModel"
 
 export default defineEventHandler(async (event) => {
   try {
-    console.log("123123123", event)
     const body = await readBody(event)
-    console.log("Request body:", body)
 
     const { name, email, phonenumber, info } = body
     if (!name || !email || !phonenumber || !info) {
-      throw new Error("required")
+      return {
+        code: 500,
+        msg: '请将信息填写完整！'
+      }
     }
 
     await User.create({ name, email, phonenumber, info })
-    const user = await User.findOne({ email })
-    return user
+    return {
+      code: 200,
+      msg: '已成功提交！我们将尽快联系您。'
+    }
   } catch (error) {
-    console.error("Error:", error)
-    return createError({
-      statusCode: 500,
-      statusMessage: "Internal Server Error",
-      message: error instanceof Error ? error.message : String(error),
-    })
+    console.log("error", error)
+    return {
+      code: 500,
+      msg: '出了一点问题，请稍后重试'
+    }
   }
 })

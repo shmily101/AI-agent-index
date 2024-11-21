@@ -7,9 +7,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.6.0",
     "@vueuse/components": "^11.1.0",
     "@vueuse/core": "^11.1.0",
     "@vueuse/nuxt": "^11.1.0",
@@ -22,10 +25,10 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@unocss/reset": "^0.62.4",
     "@unocss/nuxt": "^0.62.4",
     "@unocss/preset-rem-to-px": "^0.62.4",
-    "unocss": "^0.62.4",
-    "postcss-px-to-viewport-8-plugin": "^1.2.5"
+    "@unocss/reset": "^0.62.4",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
+    "unocss": "^0.62.4"
   }
 }

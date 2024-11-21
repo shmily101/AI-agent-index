@@ -4,14 +4,14 @@ import { TextPlugin } from "gsap/TextPlugin"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { Draggable } from "gsap/Draggable"
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin, Draggable)
 
   gsap.registerEffect({
     name: "tech4",
     extendTimeline: true,
     effect: function (targets: string[]) {
-      let tl = gsap
+      const tl = gsap
         .timeline()
         .to(targets[0], {
           duration: 0.5,

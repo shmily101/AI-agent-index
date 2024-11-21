@@ -87,21 +87,28 @@
           ></textarea>
         </li>
       </ul>
-      <button
-        w-160
-        h-60
-        mt-32
-        rd-40
-        text-16
-        :class="
-          canSubmit
-            ? ['bg-primary', 'text-#fff', 'cursor-pointer']
-            : ['bg-#ccc', 'text-gray', 'cursor-not-allowed']
-        "
-        @click="handleSubmit"
-      >
-        提交
-      </button>
+      <div flex items-center mt-32 text-16 font-600>
+        <p
+          v-show="showTip"
+          :class="showTip === 'success' ? 'text-lightBlue' : 'text-red'"
+        >
+          {{ tipText }}
+        </p>
+        <button
+          w-160
+          h-60
+          ml-32
+          rd-40
+          :class="
+            canSubmit
+              ? ['bg-primary', 'text-#fff', 'cursor-pointer']
+              : ['bg-#ccc', 'text-gray', 'cursor-not-allowed']
+          "
+          @click="canSubmit && handleSubmit()"
+        >
+          提交
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -110,6 +117,11 @@
 import Typed from "typed.js"
 import IntlTel from "@/components/IntlTel/index.vue"
 import { type Country } from "@/components/IntlTel/countryList"
+
+interface response {
+  code: number
+  msg: string
+}
 
 const country = ref<Country>({
   code: "cn",
@@ -126,7 +138,7 @@ const userForm = ref({
 })
 
 const canSubmit = computed(() => {
-  return (
+  return !!(
     userForm.value.name &&
     userForm.value.email &&
     userForm.value.phonenumber &&
@@ -134,16 +146,34 @@ const canSubmit = computed(() => {
   )
 })
 
+const showTip: Ref<"success" | "error" | null> = ref("success")
+const tipText: Ref<string> = ref("")
 const handleSubmit = async () => {
-  const response = await useFetch("/proxy/api/user", {
-    server: false,
-    method: "POST",
-    body: {
-      ...userForm.value,
-    },
-  })
-  console.log(response)
+  try {
+    const res: response = await $fetch("/proxy/api/user", {
+      server: false,
+      method: "POST",
+      body: {
+        ...userForm.value,
+      },
+    })
+    showTip.value = res?.code === 200 ? "success" : "error"
+    tipText.value = res?.msg
+  } catch (e) {
+    showTip.value = "error"
+    tipText.value = "出了一点问题，请稍后重试"
+  }
 }
+
+watch(
+  () => userForm.value,
+  () => {
+    showTip.value = null
+  },
+  {
+    deep: true,
+  }
+)
 
 onMounted(() => {
   const options = {
