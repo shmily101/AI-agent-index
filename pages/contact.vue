@@ -26,7 +26,7 @@
           <div w-full h-56 b="solid #ccc 1" rd-12 p="x-24 y-12" mt-8 flex items-center gap-12>
             <IntlTel :toFront="['cn', 'hk', 'tw', 'mo']" :country-code="country.code" @excountry="(item) => (country = item)"></IntlTel>
             <span>(+{{ country.dialCode }})</span>
-            <input v-model="userForm.phonenumber" w-full h-full />
+            <input v-model="userForm.phonenumber" @input="validateInput" w-full h-full />
           </div>
         </li>
         <li>
@@ -81,6 +81,7 @@ const handleSubmit = async () => {
       method: 'POST',
       body: {
         ...userForm.value,
+        phonenumber: `+${country.value.dialCode}${userForm.value.phonenumber}`,
       },
     })
     showTip.value = res?.code === 200 ? 'success' : 'error'
@@ -88,6 +89,15 @@ const handleSubmit = async () => {
   } catch (e) {
     showTip.value = 'error'
     tipText.value = '出了一点问题，请稍后重试'
+  }
+}
+
+const validateInput = (event: Event) => {
+  // 只允许输入数字
+  const target = event.target as HTMLInputElement
+  const value = target.value
+  if (!/^\d*$/.test(value)) {
+    userForm.value.phonenumber = value.replace(/\D/g, '')
   }
 }
 
