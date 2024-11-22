@@ -314,32 +314,36 @@ const cardFn = () => {
 
 // 第四屏-我们的服务流程动画
 const stepFn = () => {
-  const stepList = document.querySelectorAll('.step-item')
-  stepList.forEach((item) => {
+  // 创建一个 GSAP 时间线
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#section-steps',
+      start: 'top 50%',
+      end: 'bottom 90%',
+      toggleActions: 'play reset restart reset',
+      markers: true,
+    },
+  })
+  // 选择所有的 step-item 元素
+  const stepItems = document.querySelectorAll('.step-item')
+  // 遍历每个 step-item 元素并添加动画
+  stepItems.forEach((item, index) => {
     const stepImg = item.querySelector('.step-img')
     const stepInfo = item.querySelector('.step-info')
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 70%',
-          end: 'bottom 100%',
-          scrub: 2,
-          markers: false,
-        },
-      })
-      .fromTo(
-        stepImg,
-        {
-          y: 60,
-        },
-        {
-          y: 0,
-          duration: 0.5,
-          opacity: 1,
-        }
-      )
-      .fromTo(stepInfo, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 })
+    // 添加 step-img 的动画
+    tl.fromTo(
+      stepImg,
+      { y: 60, opacity: 0 },
+      { y: 0, duration: 0.5, opacity: 1 }
+      // index * 0.7 // 每个动画之间的延迟时间
+    )
+    // 添加 step-info 的动画
+    tl.fromTo(
+      stepInfo,
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.5 },
+      index * 0.7 + 0.5 // 每个动画之间的延迟时间
+    )
   })
 }
 

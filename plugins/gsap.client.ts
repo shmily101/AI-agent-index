@@ -61,7 +61,6 @@ export default defineNuxtPlugin(() => {
     const triggerList = document.querySelectorAll(".fade-trigger")
     triggerList.forEach((item) => {
       const hook = item.getAttribute("data-hook") || "70%"
-      console.log(hook, "hook")
       gsap.timeline({
         scrollTrigger: {
           trigger: item,
@@ -71,7 +70,6 @@ export default defineNuxtPlugin(() => {
         },
       })
     })
-    console.log(triggerList)
   }
 
   return {

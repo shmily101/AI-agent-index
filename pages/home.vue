@@ -126,7 +126,6 @@ const { $gsap: gsap, $triggerFn: triggerFn } = useNuxtApp()
 // 第一屏-首页动画
 const agentFn = () => {
   const sectionAgent = document.getElementById('section-agent')
-  console.log('sectionAgent', sectionAgent)
   gsap.timeline({
     scrollTrigger: {
       trigger: sectionAgent,
