@@ -320,8 +320,8 @@ const stepFn = () => {
       trigger: '#section-steps',
       start: 'top 50%',
       end: 'bottom 90%',
-      toggleActions: 'play reset restart reset',
-      markers: true,
+      toggleActions: 'restart reverse restart reverse',
+      markers: false,
     },
   })
   // 选择所有的 step-item 元素
@@ -331,12 +331,7 @@ const stepFn = () => {
     const stepImg = item.querySelector('.step-img')
     const stepInfo = item.querySelector('.step-info')
     // 添加 step-img 的动画
-    tl.fromTo(
-      stepImg,
-      { y: 60, opacity: 0 },
-      { y: 0, duration: 0.5, opacity: 1 }
-      // index * 0.7 // 每个动画之间的延迟时间
-    )
+    tl.fromTo(stepImg, { y: 60, opacity: 0 }, { y: 0, duration: 0.5, opacity: 1 })
     // 添加 step-info 的动画
     tl.fromTo(
       stepInfo,
