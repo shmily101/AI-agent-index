@@ -4,7 +4,14 @@
     <ul flex gap-40 justify-center items-center>
       <li hover:text-primary><NuxtLink to="/">首页</NuxtLink></li>
       <li hover:text-primary><NuxtLink to="/service">服务</NuxtLink></li>
-      <li hover:text-primary><NuxtLink to="/">行业</NuxtLink></li>
+      <li relative>
+        <button hover:text-primary @click="toggleDropdown">行业</button>
+        <ul v-if="isDropdownOpen" ref="dropdown" absolute left="-55" top-full bg-white b="#ebeef5 solid 1 t-primary t-solid t-3" shadow-lg rounded-6 mt-12 p-10 w-140 text-center>
+          <li p-10 hover:text-primary><NuxtLink to="/industry/finance">金融</NuxtLink></li>
+          <li p-10 hover:text-primary><NuxtLink to="/industry/education">教育</NuxtLink></li>
+          <li p-10 hover:text-primary><NuxtLink to="/industry/healthcare">医疗</NuxtLink></li>
+        </ul>
+      </li>
       <li hover:text-primary><NuxtLink to="/">关于我们</NuxtLink></li>
       <li hover:text-primary><NuxtLink to="/">新闻资讯</NuxtLink></li>
     </ul>
@@ -15,10 +22,21 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
+import { ref } from 'vue'
+
+const isDropdownOpen = ref(false)
+const dropdown = ref(null)
+
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
+
+onClickOutside(dropdown, () => {
+  isDropdownOpen.value = false
+})
 </script>
 
-<style lang="scss" scoped>
+<style>
 .keep-px-nav {
   height: 65px;
   font-size: 14px;
