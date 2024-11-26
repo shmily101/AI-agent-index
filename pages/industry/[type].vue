@@ -283,11 +283,7 @@ onMounted(() => {
   industryFn()
   cardFn()
   triggerFn()
-  // 更新ScrollTrigger，解决方案：https://gsap.com/community/forums/topic/33486-nuxt-3-gsap-scrolltrigger-startend-position-problem-after-route-navigation/
-  // 如果日后有更好的解决方案再更新
-  setTimeout(() => {
-    ScrollTrigger.refresh()
-  }, 600)
+  ScrollTrigger.refresh(true)
 })
 </script>
 
