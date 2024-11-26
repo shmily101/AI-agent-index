@@ -1,6 +1,6 @@
 <template>
   <section id="section-industry" class="keep-px-section" bg="[linear-gradient(rgba(255,_-255,_255,_0),_rgb(247,_250,_255)_100%)]">
-    <div flex p="t-50 b-0 x-200">
+    <div flex p="t-50 b-0 x-200" justify-between>
       <div class="section-text" flex="~ col" justify-center transition="duration-1s delay-0.5s">
         <h2 class="section-title" transition-duration-1s text="62 gray" op-0>
           AI Power在
@@ -283,6 +283,11 @@ onMounted(() => {
   industryFn()
   cardFn()
   triggerFn()
+  // 更新ScrollTrigger，解决方案：https://gsap.com/community/forums/topic/33486-nuxt-3-gsap-scrolltrigger-startend-position-problem-after-route-navigation/
+  // 如果日后有更好的解决方案再更新
+  setTimeout(() => {
+    ScrollTrigger.refresh()
+  }, 600)
 })
 </script>
 

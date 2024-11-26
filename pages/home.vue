@@ -43,7 +43,7 @@
         <h2 text-50 font-medium>技术领先</h2>
         <p ml-104 lh-normal text="18 #808080">依托最前沿的自然语言处理与大型语言模型技术，我们确保每个项目<br />的技术先进性。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.jpg" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.png" />
     </section>
 
     <section id="section-us-two" bg="#FAFAFC cover" flex="~ col" text-gray items-center pt-200>
@@ -51,7 +51,7 @@
         <h2 text-50 font-medium>深度定制</h2>
         <p ml-104 lh-normal text="18 #808080">我们根据客户的具体需求量身定制解决方案，确保与业务目标紧密<br />契合。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.jpg" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-02-poster.png" />
     </section>
 
     <section id="section-us-three" bg="#FAFAFC cover" flex="~ col" text-gray items-center pt-200>
@@ -59,7 +59,7 @@
         <h2 text-50 font-medium>全流程支持</h2>
         <p ml-104 lh-normal text="18 #808080">从概念设计、开发、到后续的维护与优化，我们提供全流程的支持<br />服务，确保您的AI系统长期稳定高效运行。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.jpg" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-03-poster.png" />
     </section>
 
     <section id="section-us-four" bg="#FAFAFC cover" flex="~ col" text-gray items-center py-200>
@@ -67,7 +67,7 @@
         <h2 text-50 font-medium>业务增长驱动</h2>
         <p ml-104 lh-normal text="18 #808080">通过智能化解决方案，帮助您提升业务效率、降低成本，并<br />增强市场竞争力。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.jpg" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-04-poster.png" />
     </section>
 
     <section id="section-FAQ" bg="#000 cover" p="t-300 b-200" text-white items-center font-medium>
@@ -122,7 +122,7 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap: gsap, $triggerFn: triggerFn } = useNuxtApp()
+const { $gsap: gsap, $ScrollTrigger: ScrollTrigger, $triggerFn: triggerFn } = useNuxtApp()
 // 第一屏-首页动画
 const agentFn = () => {
   const sectionAgent = document.getElementById('section-agent')
@@ -200,6 +200,11 @@ onMounted(() => {
   initScrollAnimation()
   triggerFn()
   userFn()
+  // 更新ScrollTrigger，解决方案：https://gsap.com/community/forums/topic/33486-nuxt-3-gsap-scrolltrigger-startend-position-problem-after-route-navigation/
+  // 如果日后有更好的解决方案再更新
+  setTimeout(() => {
+    ScrollTrigger.refresh()
+  }, 600)
 })
 </script>
 
