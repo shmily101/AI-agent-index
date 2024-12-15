@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="section-agent" min-h-100vh h-auto bg="black cover" flex text-white items-center font-medium>
+    <section id="section-agent" class="keep-px-height" h-auto bg="black cover" flex text-white items-center font-medium py-100 relative>
       <div class="section-wrapper" w-920 m="y-0 auto" flex="~ col" items-center transition="duration-1s delay-0.5s">
         <img w-644 h-full block src="~/assets/img/home-s1-bg.png" />
         <div w-full flex="~ col" items-center justify-center relative z-20>

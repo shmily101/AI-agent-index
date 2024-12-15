@@ -1,5 +1,5 @@
 <template>
-  <section w-screen p="y-105 x-200" flex items-center gap-100 min-h-950 class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover keep-px-section">
+  <section w-screen p="y-105 x-200" flex items-center gap-100 class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover keep-px-height">
     <div text="48 gray" mb-200>
       <p>联系我们，</p>
       <p>
@@ -15,15 +15,15 @@
       <ul w-full text="16 gray" flex="~ col" gap-24>
         <li>
           <div text="#808080"><span text="red">*</span>您的姓名</div>
-          <input v-model="userForm.name" w-full h-56 b="solid #ccc 1" rd-12 px-24 mt-8 />
+          <input v-model="userForm.name" w-full h-56 b="solid #ccc 0.5" rd-12 px-24 mt-8 />
         </li>
         <li>
           <div text="#808080"><span text="red">*</span>您的邮箱地址</div>
-          <input v-model="userForm.email" w-full h-56 b="solid #ccc 1" rd-12 px-24 mt-8 />
+          <input v-model="userForm.email" w-full h-56 b="solid #ccc 0.5" rd-12 px-24 mt-8 />
         </li>
         <li>
           <div text="#808080"><span text="red">*</span>您的手机号码</div>
-          <div w-full h-56 b="solid #ccc 1" rd-12 p="x-24 y-12" mt-8 flex items-center gap-12>
+          <div w-full h-56 b="solid #ccc 0.5" rd-12 p="x-24 y-12" mt-8 flex items-center gap-12>
             <IntlTel :toFront="['cn', 'hk', 'tw', 'mo']" :country-code="country.code" @excountry="(item) => (country = item)"></IntlTel>
             <span>(+{{ country.dialCode }})</span>
             <input v-model="userForm.phonenumber" @input="validateInput" w-full h-full />
@@ -31,7 +31,7 @@
         </li>
         <li>
           <div text="#808080"><span text="red">*</span>请简要描述您的需求</div>
-          <textarea v-model="userForm.info" w-full max-h-150 min-h-150 b="solid #ccc 1" rd-12 p="x-24 y-12" mt-8></textarea>
+          <textarea v-model="userForm.info" w-full max-h-150 min-h-150 b="solid #ccc 0.5" rd-12 p="x-24 y-12" mt-8></textarea>
         </li>
       </ul>
       <div flex items-center mt-32 text-16 font-600>
@@ -123,11 +123,3 @@ onMounted(() => {
   new Typed('#text-type', options)
 })
 </script>
-
-<style lang="scss" scoped>
-.keep-px-section {
-  height: calc(100vh - 65px);
-  margin-top: 65px;
-  overflow-y: auto;
-}
-</style>

@@ -13,7 +13,6 @@
         </ul>
       </li>
       <li hover:text-primary><NuxtLink to="/">关于我们</NuxtLink></li>
-      <li hover:text-primary><NuxtLink to="/">新闻资讯</NuxtLink></li>
     </ul>
     <button>
       <NuxtLink to="/contact" w-121 h-40 py-2 rounded-full bg-primary text-white block flex justify-center items-center>联系我们</NuxtLink>

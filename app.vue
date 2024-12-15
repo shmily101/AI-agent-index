@@ -27,11 +27,20 @@ textarea:focus {
     opacity: 1;
   }
 }
+
+.keep-px-nav {
+  height: 65px;
+  font-size: 14px;
+}
+
+.keep-px-height {
+  min-height: calc(100vh - 65px);
+}
 </style>
 
 <template>
-  <div>
-    <header>
+  <div flex="~ col">
+    <header class="keep-px-nav">
       <TopMenu />
     </header>
     <main>

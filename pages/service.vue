@@ -2,8 +2,8 @@
   <div>
     <section id="section-service" bg="#FFF" text="gray 20" relative z-2 text-center>
       <div relative z-1>
-        <div flex="~ wrap" items-center justify-center sticky top-0 overflow-hidden w-full h-screen>
-          <div id="section-wrapper" relative>
+        <div flex="~ wrap" items-center justify-center sticky top-0 overflow-hidden w-full class="keep-px-height">
+          <div id="section-wrapper" mt-120 mb-240 relative>
             <svg id="service-svg" ref="magicRingSvg" w-200 h-auto m="y-0 auto" width="162px" height="146px" viewBox="0 0 162 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
