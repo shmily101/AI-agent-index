@@ -211,6 +211,15 @@ const magicRingFn = () => {
     path = document.querySelectorAll('.magic-path'),
     circle = document.querySelector('.magic-circle')
 
+  function calculateScaleFactor(element, maxWidth) {
+    const rect = element.getBoundingClientRect();
+    const currentWidth = rect.width;
+    return Math.min(maxWidth / currentWidth, 4); // Limit to original 4x scale or less
+  }
+  // 限制缩放的最大宽度
+  const maxWidth = window.innerHeight * 0.7;
+  const scaleFactor = calculateScaleFactor(svg, maxWidth);
+
   // 创建一个动画
   const animate = () => {
     // 重置初始状态
@@ -243,8 +252,8 @@ const magicRingFn = () => {
       .timeline()
       .to(svg, {
         duration: 0,
-        scale: 4,
-        yPercent: 80,
+        scale: scaleFactor,
+        yPercent: 100,
       })
       .to(path, {
         duration: 1,
