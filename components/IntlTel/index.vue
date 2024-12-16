@@ -5,8 +5,8 @@
         <div w-20 h-14 :class="'iti-flag ' + currentData.code"></div>
         <div class="iti-arrow"></div>
       </div>
-      <ul class="country-list" v-if="!hideSubMenu" v-on-click-outside="() => (hideSubMenu = true)">
-        <li v-for="item in frontCountriesArray" :key="item.id" :class="'country ' + (item.code == currentCode ? 'highlight' : '')" @click="handleSelectCountry(item)">
+      <ul v-if="!hideSubMenu" v-on-click-outside="() => (hideSubMenu = true)" class="country-list">
+        <li v-for="item in frontCountriesArray" :key="item.code" :class="'country ' + (item.code == currentCode ? 'highlight' : '')" @click="handleSelectCountry(item)">
           <div class="flag-box">
             <div :class="'iti-flag ' + item.code"></div>
           </div>
@@ -27,8 +27,8 @@
 </template>
 
 <script setup lang="ts">
-import { countries, type CountryCode } from './countryList'
 import { vOnClickOutside } from '@vueuse/components'
+import { type Country, countries, type CountryCode } from './countryList'
 
 const props = withDefaults(
   defineProps<{
@@ -38,11 +38,12 @@ const props = withDefaults(
   {
     toFront: () => [],
     countryCode: Object.keys(countries)[0] as CountryCode,
-  }
+  },
 )
 // 定义事件
 const emit = defineEmits<{
-  (e: 'excountry', item: any): void
+  (e: 'excountry', item: Country): void
+  (e: 'update:toFront', item: CountryCode[]): void
 }>()
 
 // 初始化数据
@@ -56,7 +57,7 @@ const currentData = computed(() => {
 
 // 计算属性：前置国家数组
 const frontCountriesArray = computed(() => {
-  const toFrontCodes: Record<string, any> = {}
+  const toFrontCodes: Record<CountryCode, Country> = {}
   props.toFront.forEach((code) => {
     const stringCode = String(code) as CountryCode
     const needObj = countries[stringCode]
@@ -70,11 +71,9 @@ const frontCountriesArray = computed(() => {
 
 // 计算属性：国家数组
 const countriesArray = computed(() => {
-  const countryCopie = { ...countries }
-  props.toFront.forEach((code) => {
-    delete countryCopie[code]
-  })
-  return countryCopie
+  const countryEntries = Object.entries(countries)
+  const filteredEntries = countryEntries.filter(([key]) => !props.toFront.includes(key as CountryCode))
+  return Object.fromEntries(filteredEntries)
 })
 
 // 监听器：国家代码变化
@@ -82,18 +81,19 @@ watch(
   () => props.countryCode,
   (newCode) => {
     setCountry(countries[newCode])
-  }
+  },
 )
 
 // 方法：设置国家
-const setCountry = (item: any) => {
+const setCountry = (item: Country) => {
   currentCode.value = item.code
-  props.toFront.push(String(item.code) as CountryCode)
+  const newToFront = [...props.toFront, String(item.code) as CountryCode]
+  emit('update:toFront', newToFront)
   emit('excountry', item)
 }
 
 // 方法：处理选择国家
-const handleSelectCountry = (item: any) => {
+const handleSelectCountry = (item: Country) => {
   currentCode.value = item.code
   hideSubMenu.value = true
   setCountry(item)

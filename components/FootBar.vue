@@ -21,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
-
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,

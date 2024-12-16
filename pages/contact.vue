@@ -24,9 +24,9 @@
         <li>
           <div text="#808080"><span text="red">*</span>您的手机号码</div>
           <div w-full h-56 b="solid #ccc 0.5" rd-12 p="x-24 y-12" mt-8 flex items-center gap-12>
-            <IntlTel :toFront="['cn', 'hk', 'tw', 'mo']" :country-code="country.code" @excountry="(item) => (country = item)"></IntlTel>
+            <IntlTel :to-front="['cn', 'hk', 'tw', 'mo']" :country-code="country.code" @excountry="(item) => (country = item)"></IntlTel>
             <span>(+{{ country.dialCode }})</span>
-            <input v-model="userForm.phonenumber" @input="validateInput" w-full h-full />
+            <input v-model="userForm.phonenumber" w-full h-full @input="validateInput" />
           </div>
         </li>
         <li>
@@ -47,7 +47,7 @@
 <script lang="ts" setup>
 import Typed from 'typed.js'
 import IntlTel from '@/components/IntlTel/index.vue'
-import { type Country } from '@/components/IntlTel/countryList'
+import type { Country } from '@/components/IntlTel/countryList'
 
 interface response {
   code: number
@@ -86,7 +86,7 @@ const handleSubmit = async () => {
     })
     showTip.value = res?.code === 200 ? 'success' : 'error'
     tipText.value = res?.msg
-  } catch (e) {
+  } catch {
     showTip.value = 'error'
     tipText.value = '出了一点问题，请稍后重试'
   }
@@ -108,7 +108,7 @@ watch(
   },
   {
     deep: true,
-  }
+  },
 )
 
 onMounted(() => {

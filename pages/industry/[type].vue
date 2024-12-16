@@ -1,65 +1,67 @@
 <template>
-  <section id="section-industry" class="keep-px-section" bg="[linear-gradient(rgba(255,_-255,_255,_0),_rgb(247,_250,_255)_100%)]">
-    <div flex p="t-50 b-0 x-200" justify-between>
-      <div class="section-text" flex="~ col" justify-center transition="duration-1s delay-0.5s">
-        <h2 class="section-title" transition-duration-1s text="62 gray" op-0>
-          AI Power在
-          <span :text="type === 'finance' ? '#FFC300' : type === 'education' ? '#E33C64' : '#00BA5A'" mx-8>{{ configJson[type].title }}</span>
-          领域
-        </h2>
-        <h4 class="section-slogan" transition="duration-0.5s delay-0.5s" text="24 #808080" mt-50 font="300 sans" op-0>{{ configJson[type].titleSlogan }}</h4>
-        <button class="section-btn" transition="duration-0.5s delay-0.5s" op-0 w-250 h-50 py-8 my-24 rounded-full bg-primary text="white 20">
-          <NuxtLink to="/contact"> 讨论您的项目需求→ </NuxtLink>
-        </button>
+  <div>
+    <section id="section-industry" class="keep-px-section" bg="[linear-gradient(rgba(255,_-255,_255,_0),_rgb(247,_250,_255)_100%)]">
+      <div flex p="t-50 b-0 x-200" justify-between>
+        <div class="section-text" flex="~ col" justify-center transition="duration-1s delay-0.5s">
+          <h2 class="section-title" transition-duration-1s text="62 gray" op-0>
+            AI Power在
+            <span :text="type === 'finance' ? '#FFC300' : type === 'education' ? '#E33C64' : '#00BA5A'" mx-8>{{ configJson[type].title }}</span>
+            领域
+          </h2>
+          <h4 class="section-slogan" transition="duration-0.5s delay-0.5s" text="24 #808080" mt-50 font="300 sans" op-0>{{ configJson[type].titleSlogan }}</h4>
+          <button class="section-btn" transition="duration-0.5s delay-0.5s" op-0 w-250 h-50 py-8 my-24 rounded-full bg-primary text="white 20">
+            <NuxtLink to="/contact"> 讨论您的项目需求→ </NuxtLink>
+          </button>
+        </div>
+        <img op-0 w-698 h-698 ml-100 :src="configJson[type].bgImg" />
       </div>
-      <img op-0 w-698 h-698 ml-100 :src="configJson[type].bgImg" />
-    </div>
-    <svg w-full preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
-      <path fill="#ffffff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
-    </svg>
-  </section>
-  <section flex="~ col" items-center p="t-50 b-150 x-200">
-    <h3 text="40 gray">{{ configJson[type].title }}行业的问题和挑战</h3>
-    <div class="fade-trigger" data-hook="90%" bg="#FAFAFC" w-full p="x-170 y-70" rounded-20 text="20 gray" mt-70>
-      {{ configJson[type].questionSlogan }}
-    </div>
-  </section>
-  <section flex="~ col" items-center p="y-150 x-200" bg="#F7FAFF">
-    <h3 class="fade-trigger" text="40 gray" font="300 sans">提示工程(Prompt Engineering)赋能{{ configJson[type].title }}行业</h3>
-    <h2 class="fade-trigger" text="20 gray" m="t-20 b-20">{{ configJson[type].advSlogan }}</h2>
-    <ul id="advantages-list" grid="~ cols-3 rows-2" gap="x-200 y-50" w-full>
-      <li v-for="(item, index) in configJson[type].advantagesList" :key="index" class="advantage-item" op-0 flex="~ col" items-center text-center>
-        <img w-70 h-70 :src="item.img" />
-        <h2 my-12 text="32">
-          {{ item.title }}
-        </h2>
-        <p text="16 #808080" v-html="item.content" />
-      </li>
-    </ul>
-  </section>
-  <section bg="[linear-gradient(rgba(255,_-255,_255,_0),_rgb(247,_250,_255)_100%)]">
-    <h3 m="t-100 x-100" text="40 gray" font="300 sans">我们的案例</h3>
-    <ul class="fade-trigger" flex m="x-100 y-50" justify-between>
-      <li v-for="(item, index) in configJson[type].demoList" :key="index" w-500 overflow-hidden rounded-20 bg="#FFF" shadow="[rgba(140,152,164,0.25)_0px_3px_6px_0px]">
-        <img w-full h-360 :src="item.img" />
-        <div p="x-50 y-50">
-          <h2 my-12 text="32 gray">
+      <svg w-full preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+        <path fill="#ffffff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+      </svg>
+    </section>
+    <section flex="~ col" items-center p="t-50 b-150 x-200">
+      <h3 text="40 gray">{{ configJson[type].title }}行业的问题和挑战</h3>
+      <div class="fade-trigger" data-hook="90%" bg="#FAFAFC" w-full p="x-170 y-70" rounded-20 text="20 gray" mt-70>
+        {{ configJson[type].questionSlogan }}
+      </div>
+    </section>
+    <section flex="~ col" items-center p="y-150 x-200" bg="#F7FAFF">
+      <h3 class="fade-trigger" text="40 gray" font="300 sans">提示工程(Prompt Engineering)赋能{{ configJson[type].title }}行业</h3>
+      <h2 class="fade-trigger" text="20 gray" m="t-20 b-20">{{ configJson[type].advSlogan }}</h2>
+      <ul id="advantages-list" grid="~ cols-3 rows-2" gap="x-200 y-50" w-full>
+        <li v-for="(item, index) in configJson[type].advantagesList" :key="index" class="advantage-item" op-0 flex="~ col" items-center text-center>
+          <img w-70 h-70 :src="item.img" />
+          <h2 my-12 text="32">
             {{ item.title }}
           </h2>
           <p text="16 #808080" v-html="item.content" />
-        </div>
-      </li>
-    </ul>
-    <svg w-full preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
-      <path fill="#ffffff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
-    </svg>
-  </section>
-  <section flex="~ col" items-center py-100>
-    <h3 text="40 gray">准备好使用AI Power了吗？</h3>
-    <button w-250 h-50 py-8 my-40 rounded-full bg-primary text="white 20">
-      <NuxtLink to="/contact"> 讨论您的项目需求→ </NuxtLink>
-    </button>
-  </section>
+        </li>
+      </ul>
+    </section>
+    <section bg="[linear-gradient(rgba(255,_-255,_255,_0),_rgb(247,_250,_255)_100%)]">
+      <h3 m="t-100 x-100" text="40 gray" font="300 sans">我们的案例</h3>
+      <ul class="fade-trigger" flex m="x-100 y-50" justify-between>
+        <li v-for="(item, index) in configJson[type].demoList" :key="index" w-500 overflow-hidden rounded-20 bg="#FFF" shadow="[rgba(140,152,164,0.25)_0px_3px_6px_0px]">
+          <img w-full h-360 :src="item.img" />
+          <div p="x-50 y-50">
+            <h2 my-12 text="32 gray">
+              {{ item.title }}
+            </h2>
+            <p text="16 #808080" v-html="item.content" />
+          </div>
+        </li>
+      </ul>
+      <svg w-full preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+        <path fill="#ffffff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+      </svg>
+    </section>
+    <section flex="~ col" items-center py-100>
+      <h3 text="40 gray">准备好使用AI Power了吗？</h3>
+      <button w-250 h-50 py-8 my-40 rounded-full bg-primary text="white 20">
+        <NuxtLink to="/contact"> 讨论您的项目需求→ </NuxtLink>
+      </button>
+    </section>
+  </div>
 </template>
 
 <script lang="ts" setup>

@@ -17,8 +17,8 @@
 }
 
 .intl-tel-input input,
-.intl-tel-input input[type=text],
-.intl-tel-input input[type=tel] {
+.intl-tel-input input[type='text'],
+.intl-tel-input input[type='tel'] {
   position: relative;
   z-index: 0;
   margin-top: 0 !important;
@@ -76,7 +76,7 @@
   margin: 0 0 0 -1px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   white-space: nowrap;
   max-height: 500px;
   overflow-y: scroll;
@@ -102,7 +102,7 @@
 .intl-tel-input .country-list .divider {
   padding-bottom: 5px;
   margin-bottom: 5px;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 
 .intl-tel-input .country-list .country {
@@ -129,11 +129,11 @@
 }
 
 .intl-tel-input.allow-dropdown input,
-.intl-tel-input.allow-dropdown input[type=text],
-.intl-tel-input.allow-dropdown input[type=tel],
+.intl-tel-input.allow-dropdown input[type='text'],
+.intl-tel-input.allow-dropdown input[type='tel'],
 .intl-tel-input.separate-dial-code input,
-.intl-tel-input.separate-dial-code input[type=text],
-.intl-tel-input.separate-dial-code input[type=tel] {
+.intl-tel-input.separate-dial-code input[type='text'],
+.intl-tel-input.separate-dial-code input[type='tel'] {
   padding-right: 6px;
   padding-left: 52px;
   margin-left: 0;
@@ -159,13 +159,13 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.intl-tel-input.allow-dropdown input[disabled]+.flag-container:hover,
-.intl-tel-input.allow-dropdown input[readonly]+.flag-container:hover {
+.intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover,
+.intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover {
   cursor: default;
 }
 
-.intl-tel-input.allow-dropdown input[disabled]+.flag-container:hover .selected-flag,
-.intl-tel-input.allow-dropdown input[readonly]+.flag-container:hover .selected-flag {
+.intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover .selected-flag,
+.intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover .selected-flag {
   background-color: transparent;
 }
 
@@ -181,8 +181,8 @@
 }
 
 .intl-tel-input.separate-dial-code.iti-sdc-2 input,
-.intl-tel-input.separate-dial-code.iti-sdc-2 input[type=text],
-.intl-tel-input.separate-dial-code.iti-sdc-2 input[type=tel] {
+.intl-tel-input.separate-dial-code.iti-sdc-2 input[type='text'],
+.intl-tel-input.separate-dial-code.iti-sdc-2 input[type='tel'] {
   padding-left: 66px;
 }
 
@@ -191,8 +191,8 @@
 }
 
 .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input,
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=text],
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=tel] {
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type='text'],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type='tel'] {
   padding-left: 76px;
 }
 
@@ -201,8 +201,8 @@
 }
 
 .intl-tel-input.separate-dial-code.iti-sdc-3 input,
-.intl-tel-input.separate-dial-code.iti-sdc-3 input[type=text],
-.intl-tel-input.separate-dial-code.iti-sdc-3 input[type=tel] {
+.intl-tel-input.separate-dial-code.iti-sdc-3 input[type='text'],
+.intl-tel-input.separate-dial-code.iti-sdc-3 input[type='tel'] {
   padding-left: 74px;
 }
 
@@ -211,8 +211,8 @@
 }
 
 .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input,
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=text],
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type=tel] {
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type='text'],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-3 input[type='tel'] {
   padding-left: 84px;
 }
 
@@ -221,8 +221,8 @@
 }
 
 .intl-tel-input.separate-dial-code.iti-sdc-4 input,
-.intl-tel-input.separate-dial-code.iti-sdc-4 input[type=text],
-.intl-tel-input.separate-dial-code.iti-sdc-4 input[type=tel] {
+.intl-tel-input.separate-dial-code.iti-sdc-4 input[type='text'],
+.intl-tel-input.separate-dial-code.iti-sdc-4 input[type='tel'] {
   padding-left: 82px;
 }
 
@@ -231,8 +231,8 @@
 }
 
 .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input,
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=text],
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type=tel] {
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type='text'],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 input[type='tel'] {
   padding-left: 92px;
 }
 
@@ -241,8 +241,8 @@
 }
 
 .intl-tel-input.separate-dial-code.iti-sdc-5 input,
-.intl-tel-input.separate-dial-code.iti-sdc-5 input[type=text],
-.intl-tel-input.separate-dial-code.iti-sdc-5 input[type=tel] {
+.intl-tel-input.separate-dial-code.iti-sdc-5 input[type='text'],
+.intl-tel-input.separate-dial-code.iti-sdc-5 input[type='tel'] {
   padding-left: 90px;
 }
 
@@ -251,8 +251,8 @@
 }
 
 .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input,
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=text],
-.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type=tel] {
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type='text'],
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-5 input[type='tel'] {
   padding-left: 100px;
 }
 
@@ -1611,20 +1611,20 @@
   width: 20px;
   height: 15px;
   box-shadow: 0px 0px 1px 0px #888;
-  background-image: url("flags.png");
+  background-image: url('flags.png');
   background-repeat: no-repeat;
-  background-color: #DBDBDB;
+  background-color: #dbdbdb;
   background-position: 20px 0;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2 / 1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
   .iti-flag {
-    background-image: url("flags@2x.png");
+    background-image: url('flags@2x.png');
   }
 }
 

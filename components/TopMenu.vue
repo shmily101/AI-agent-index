@@ -6,7 +6,7 @@
       <li hover:text-primary><NuxtLink to="/service">服务</NuxtLink></li>
       <li relative>
         <button hover:text-primary @click="toggleDropdown">行业</button>
-        <ul v-if="isDropdownOpen" @click="toggleDropdown" ref="dropdown" absolute left="-55" top-full bg-white b="#ebeef5 solid 1 t-primary t-solid t-3" shadow-lg rounded-6 mt-12 p-10 w-140 text-center>
+        <ul v-if="isDropdownOpen" ref="dropdown" absolute left="-55" top-full bg-white b="#ebeef5 solid 1 t-primary t-solid t-3" shadow-lg rounded-6 mt-12 p-10 w-140 text-center @click="toggleDropdown">
           <li p-10 hover:text-primary><NuxtLink to="/industry/finance">金融</NuxtLink></li>
           <li p-10 hover:text-primary><NuxtLink to="/industry/education">教育</NuxtLink></li>
           <li p-10 hover:text-primary><NuxtLink to="/industry/healthcare">医疗</NuxtLink></li>
