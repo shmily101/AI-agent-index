@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 // 样式重置
-import "@unocss/reset/tailwind.css"
+import '@unocss/reset/tailwind.css'
 </script>
 
 <style>
 @font-face {
   font-family: AliRegular;
-  src: url("~/assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2");
+  src: url('~/assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2');
 }
 
 html {
@@ -19,7 +19,9 @@ textarea:focus {
 }
 
 .fade-trigger {
-  transition: opacity 0.5s, transform 0.5s;
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
   transform: translateY(50px);
   opacity: 0;
   &.active {
@@ -28,13 +30,24 @@ textarea:focus {
   }
 }
 
-.keep-px-nav {
-  height: 65px;
-  font-size: 14px;
+@media (max-width: 1023px) {
+  .keep-px-nav {
+    height: 30px;
+    font-size: 14px;
+  }
+  .keep-px-height {
+    min-height: calc(100vh - 30px);
+  }
 }
 
-.keep-px-height {
-  min-height: calc(100vh - 65px);
+@media (min-width: 1024px) {
+  .keep-px-nav {
+    height: 65px;
+    font-size: 14px;
+  }
+  .keep-px-height {
+    min-height: calc(100vh - 65px);
+  }
 }
 </style>
 
@@ -46,5 +59,8 @@ textarea:focus {
     <main>
       <NuxtPage />
     </main>
+    <footer bg="#000">
+      <FootBar />
+    </footer>
   </div>
 </template>
