@@ -79,51 +79,51 @@ const configJson = {
     advantagesList: [
       {
         title: '设计研报系统',
-        content: '大幅度提高撰写研报的效率',
+        content: '大幅度提高撰写研报的效率，为分析师提供更加智能化的内容生成工具，支持深度数据分析和智能推荐。',
         img: '/_nuxt/assets/svg/finance-adv-01.svg',
       },
       {
         title: '智能客服与客户支持',
-        content: '通过AI驱动的智能客服系统，实现7x24小时的客户支持，减少人工客服成本，提高客户满意度。',
+        content: '通过AI驱动的智能客服系统，实现7x24小时的客户支持，减少人工客服成本，大幅提高客户满意度。',
         img: '/_nuxt/assets/svg/finance-adv-02.svg',
       },
       {
-        title: '提高生产力',
-        content: '自动化处理复杂的法规文本和交易数据，实时监测潜在风险，确保合规性。',
+        title: '风险管理与合规检查',
+        content: '自动化处理复杂的法规文本和交易数据，实时捕捉潜在风险，确保合规性与安全性。',
         img: '/_nuxt/assets/svg/finance-adv-03.svg',
       },
       {
         title: '个性化金融产品推荐',
-        content: '基于客户行为数据和交易历史，提供个性化产品推荐，提升用户参与度和产品销售率。',
+        content: '基于客户行为数据和交易历史，提供个性化的产品推荐，提升用户参与度和品牌信赖。',
         img: '/_nuxt/assets/svg/finance-adv-04.svg',
       },
       {
-        title: '精密度和准确度',
-        content: '精度是软件开发的关键，</br>而敏捷的工程师擅长提供准确的结果。</br>他们对细节的细致关注确保最终产品完美地满足要求，</br>从而提高客户满意度。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '智能数据洞察与趋势分析',
+        content: '基于强大的AI模型和数据分析能力，为企业提供关键业务数据的洞察和市场趋势分析，帮助企业把握发展机遇，支持战略决策。',
+        img: '/_nuxt/assets/svg/finance-adv-05.svg',
       },
       {
-        title: '个性化回复',
-        content: '提示工程师开发了聊天机器人，</br>可根据每位访客的独特需求提供个性化响应。</br>这种定制增强了用户体验，使互动更加个性化和真实。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '自动化财务报告生成',
+        content: '为企业提供智能化的财务报告生成服务，涵盖数据整合、分析和报告输出，大幅减少财务人员的工作量，确保数据准确性和透明度。',
+        img: '/_nuxt/assets/svg/finance-adv-06.svg',
       },
     ],
     demoList: [
       {
         title: '算法交易',
         content: '算法交易，也称为算法交易或暗箱交易，是指使用基于人工智能的计算机算法来自动化全球市场上金融工具的买卖过程。这些算法被编程为根据预定义的条件（例如价格波动、交易量或其他市场指标）执行交易。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-finance-02.webp',
       },
       {
         title: '自动信用评分和风险评估',
         content: '人工智能在信用评分中发挥着变革性的作用。传统的信用评分模型往往无法解释个人财务行为的复杂性和多变性。而人工智能可以处理大量数据，识别模式，并做出高度准确的预测。这使得信用评估更加个性密口公平。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-finance-03.webp',
       },
       {
         title: '聊天机器人和虚拟助手',
         content:
           '由生成式人工智能驱动的聊天机器人和虚拟助手正在引领银行业和金融科技的未来。它们提供了一系列好处，从改善客户体验和节省成本到增强安全性和数据驱动的洞察力。随着金融科技应用开发B艮务推动这一转变，我们可以期待银行业出现令人兴奋的变革，人工智能将成为日常金融互动中不可或缺的一部分。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-finance-04.webp',
       },
     ],
   },
@@ -136,33 +136,33 @@ const configJson = {
     advantagesList: [
       {
         title: '医学文献分析',
-        content: '通过Prompt Engineering帮助医疗研究人员快速筛选和分析海量的医学文献。',
+        content: '通过Prompt Engineering帮助医疗研究人员快速筛选和分析海量的医学文献，提高研究效率。',
         img: '/_nuxt/assets/svg/health-adv-01.svg',
       },
       {
         title: '智能客服与客户支持',
-        content: '通过AI驱动的智能客服系统，实现7x24小时的客户支持，减少人工客服成本，提高客户满意度。',
+        content: '通过AI驱动的智能客服系统，实现7x24小时的患者支持，减少人工客服成本，提高患者满意度。',
         img: '/_nuxt/assets/svg/finance-adv-02.svg',
       },
       {
         title: '病历数据处理',
-        content: '自动化处理电子病历，简化医生的日常工作，减少人工错误。',
+        content: '自动化处理电子病历，简化医生的日常工作，减少人工错误，提高数据管理效率。',
         img: '/_nuxt/assets/svg/health-adv-03.svg',
       },
       {
         title: '患者情绪分析与管理',
-        content: '通过NLP技术分析患者反馈，及时发现情绪波动，提供个性化医疗服务。',
+        content: '通过NLP技术分析患者反馈及其数据规律，为患者提供个性化医疗服务，支持个体化诊疗方案的制定。',
         img: '/_nuxt/assets/svg/health-adv-04.svg',
       },
       {
-        title: '精密度和准确度',
-        content: '精度是软件开发的关键，</br>而敏捷的工程师擅长提供准确的结果。</br>他们对细节的细致关注确保最终产品完美地满足要求，</br>从而提高客户满意度。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '远程医疗助手',
+        content: '为医生和患者提供AI驱动的远程医疗支持，涵盖在线问诊、药物建议和健康指导等功能，改善医疗服务可及性。',
+        img: '/_nuxt/assets/svg/health-adv-05.svg',
       },
       {
-        title: '个性化回复',
-        content: '提示工程师开发了聊天机器人，</br>可根据每位访客的独特需求提供个性化响应。</br>这种定制增强了用户体验，使互动更加个性化和真实。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '医疗数据安全与合规支持',
+        content: '利用AI技术确保医疗数据的安全性，支持合规性检查和风险防控，为机构建立可信赖的数据管理系统。',
+        img: '/_nuxt/assets/svg/finance-adv-05.svg',
       },
     ],
     demoList: [
@@ -170,18 +170,18 @@ const configJson = {
         title: '人工智能家庭和社区护理支持',
         content:
           '人工智能(AI)正在显著增强医疗保健领域的内部和社区护理支持。通过部署AI驱动的技术，医疗保健提供育可以为医疗机构和社区环境中的患者提供更加个性化、高效和主动的护理。AI的这种应用解决了提供持续、优质护理的关键夕K战，包括管理大量患者、确保及时干预以及提供个性化护理计划。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-healthcare-02.webp',
       },
       {
         title: '慢性病管理',
         content:
           '在医疗要用不断上涨的时代，利用人工智能的力星不仅可以提高风险评估和个性化护理，而且还为提高慢性病管理的透明度、问责制和公平性提供了重要机会。有了合适的人才和合适的技术，我们就能站在医疗保健革命的前沿，将患者福祉和经济可持续性放在首位。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-healthcare-03.webp',
       },
       {
         title: '电子健康记录(EHR)',
         content: '区块链正在改变患者电子健康记录的存储和共享方式。它可以为健康信息交换提供更安全、更透明、更可追溯的基础系统。该技术有可能连接多个孤立运行的数据管理系统，并提供一个可以互联互通的电子健康记录系统。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-healthcare-04.webp',
       },
     ],
   },
@@ -194,7 +194,7 @@ const configJson = {
     advantagesList: [
       {
         title: '个性化学习方案',
-        content: '通过Prompt Engineering为学生设计个性化学习路径，提升学习效率。',
+        content: '通过Prompt Engineering为学生设计个性化学习路径，提升学习效率与学习兴趣。',
         img: '/_nuxt/assets/svg/finance-adv-01.svg',
       },
       {
@@ -204,23 +204,23 @@ const configJson = {
       },
       {
         title: '自动化考试评估',
-        content: '利用AI实现考试卷的自动评估和分析，减少教师的工作量。',
+        content: '利用AI实现考试的自动评估和分析，减少教师的工作量，提升评分的公平性与效率。',
         img: '/_nuxt/assets/svg/edu-adv-03.svg',
       },
       {
         title: '智能学习助手',
-        content: '通过AI模型提供24/7的智能答疑助手，帮助学生快速解决学习中的问题。',
+        content: '通过AI模型提供7x24的智能答疑服务，帮助学生快速解决学习中的问题，优化学习体验。',
         img: '/_nuxt/assets/svg/edu-adv-04.svg',
       },
       {
-        title: '精密度和准确度',
-        content: '精度是软件开发的关键，</br>而敏捷的工程师擅长提供准确的结果。</br>他们对细节的细致关注确保最终产品完美地满足要求，</br>从而提高客户满意度。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '学习进度跟踪与反馈',
+        content: '通过AI技术帮助教师实时追踪学生的学习进度，生成可视化的反馈报告，支持个性化教学策略的制定，提升学习效果。',
+        img: '/_nuxt/assets/svg/edu-adv-05.svg',
       },
       {
-        title: '个性化回复',
-        content: '提示工程师开发了聊天机器人，</br>可根据每位访客的独特需求提供个性化响应。</br>这种定制增强了用户体验，使互动更加个性化和真实。',
-        img: '/_nuxt/assets/svg/finance-adv-01.svg',
+        title: '教育数据洞察与优化',
+        content: '通过分析教育数据，提供教学模式优化建议，帮助教育机构提升教学质量和运营效率。',
+        img: '/_nuxt/assets/svg/finance-adv-06.svg',
       },
     ],
     demoList: [

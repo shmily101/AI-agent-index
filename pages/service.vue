@@ -73,7 +73,7 @@
               {{ item.content }}
             </p>
           </div>
-          <img w-750 h-450 src="~/assets/img/home-s3-01-poster.jpg" />
+          <img w-750 h-450 :src="item.img" />
         </li>
       </ul>
     </section>
@@ -137,32 +137,32 @@ const aiServiceList = [
   {
     title: '专业咨询',
     content: '根据您的业务需求提供咨询解决方案，专家顾问提供指导，帮助您就生成式人工智能计划做出明智的决策。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-01.png',
   },
   {
     title: '设计和优化AI模型提示词',
     content: '设计提示和指令以提高AI模型性能和结果准确性。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-02.png',
   },
   {
     title: 'NLP模型定制',
     content: '根据客户需求定制的自然语言处理模型，提升业务自动化。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-03.jpg',
   },
   {
     title: 'AI系统集成',
     content: '从技术咨询到实施落地，确保AI系统与现有业务系统无缝集成。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-04.jpg',
   },
   {
     title: '后续优化与维护',
     content: '为客户提供持续的系统监控、维护和优化服务。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-05.jpeg',
   },
   {
     title: '定制AI Agent',
     content: '根据客户需求定制AI Agent，提高业务效率。',
-    img: '~/assets/img/home-s3-01-poster.jpg',
+    img: '_nuxt/assets/img/service-s2-06.jpg',
   },
 ]
 const advantagesList = [
