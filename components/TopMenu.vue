@@ -12,7 +12,7 @@
           <li p-10 hover:text-primary><NuxtLink to="/industry/healthcare">医疗</NuxtLink></li>
         </ul>
       </li>
-      <li hover:text-primary><NuxtLink to="/">关于我们</NuxtLink></li>
+      <li hover:text-primary><NuxtLink to="/about">关于我们</NuxtLink></li>
     </ul>
     <button class="hidden lg:flex p-[5px_20px] rounded-full bg-primary text-white justify-center items-center">
       <NuxtLink to="/contact">联系我们</NuxtLink>
