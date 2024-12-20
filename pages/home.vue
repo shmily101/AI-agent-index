@@ -11,8 +11,9 @@
       <p absolute bottom-40 left="50%" transform="translate-x--50%" text-16>↓ 下滑查看</p>
     </section>
 
-    <section id="section-card" py-200 class="bg-[url('~/assets/img/home-s2-bg.png')] bg-cover" text-gray>
-      <div m="y-0 auto" transition="duration-1s delay-0.5s">
+    <section id="section-card" py-200 text-gray bg="#FAFAFC cover" relative>
+      <img src="@/assets/img/home-s2-bg.png" absolute top-0 left-0 />
+      <div m="y-0 auto" transition="duration-1s delay-0.5s" relative z-1>
         <div w-screen h-max flex="~ col" items-center>
           <h1 text-60 mb-14>定制化Agent服务</h1>
           <p text="24 #808080" font="300 sans" d="0 60px 0">我们的定制化Agent服务，利用人工智能，赋能各行各业</p>
@@ -38,12 +39,12 @@
     </section>
 
     <section id="section-us-one" bg="#FAFAFC cover" flex="~ col" text-gray items-center>
-      <h1 mt-160 text-40 font="300 sans">为什么选择我们？</h1>
-      <div class="fade-trigger" flex items-center w-1090 mx-auto mt-80>
+      <h1 mt-100 text-40 font="300 sans">为什么选择我们？</h1>
+      <div class="fade-trigger" data-hook="95%" flex items-center w-1090 mx-auto mt-80>
         <h2 text-50 font-medium>技术领先</h2>
         <p ml-104 lh-normal text="18 #808080">依托最前沿的自然语言处理与大型语言模型技术，我们确保每个项目<br />的技术先进性。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.png" />
+      <img class="fade-trigger" data-hook="95%" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.png" />
     </section>
 
     <section id="section-us-two" bg="#FAFAFC cover" flex="~ col" text-gray items-center pt-200>

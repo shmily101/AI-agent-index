@@ -1,14 +1,14 @@
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { TextPlugin } from "gsap/TextPlugin"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { Draggable } from "gsap/Draggable"
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { TextPlugin } from 'gsap/TextPlugin'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+import { Draggable } from 'gsap/Draggable'
 
 export default defineNuxtPlugin(() => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin, Draggable)
 
   gsap.registerEffect({
-    name: "tech4",
+    name: 'tech4',
     extendTimeline: true,
     effect: function (targets: string[]) {
       const tl = gsap
@@ -30,7 +30,7 @@ export default defineNuxtPlugin(() => {
           {
             y: 0,
             opacity: 1,
-          }
+          },
         )
 
       if (targets[3]) {
@@ -42,7 +42,7 @@ export default defineNuxtPlugin(() => {
           {
             y: 0,
             autoAlpha: 1,
-          }
+          },
         )
       }
       tl.to(
@@ -50,22 +50,22 @@ export default defineNuxtPlugin(() => {
         {
           yPercent: -10,
         },
-        "<"
-      ).set({}, {}, "+=0.2")
+        '<',
+      ).set({}, {}, '+=0.2')
 
       return tl
     },
   })
 
   function triggerFn() {
-    const triggerList = document.querySelectorAll(".fade-trigger")
+    const triggerList = document.querySelectorAll('.fade-trigger')
     triggerList.forEach((item) => {
-      const hook = item.getAttribute("data-hook") || "70%"
+      const hook = item.getAttribute('data-hook') || '70%'
       gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "top " + hook,
-          toggleClass: "active",
+          start: 'top ' + hook,
+          toggleClass: 'active',
           markers: false,
         },
       })
