@@ -227,17 +227,17 @@ const configJson = {
       {
         title: '自动评分和评估',
         content: '在当今快节奏、技术驱动的世界里，教育正在经历重大变革。评估在衡量学生的进步和对概念的理解方面起着至关重要的作用。这一历程中最有趣的进步之一是将人工智能融入课堂，特别是在评分和评估领域。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-education-02.webp',
       },
       {
         title: '通过区块链进行凭证验证',
         content: '教育科技行业正在通过将数字证书验证与区块链技术结合起来，推动其教育平台的发展，以促进职业发展并提供高等教育，同时减少对纸质成绩单和证书的需求。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-education-03.webp',
       },
       {
         title: '去中心化学习平台',
         content: '区块链技术可以创建去中心化的学习平台。这些平台使学习者能睡从世界任何地方访问教育费源，从而营造更具包容性和可及性的教育环境。',
-        img: '/_nuxt/assets/img/home-s3-01-poster.jpg',
+        img: '/_nuxt/assets/img/industry-education-04.webp',
       },
     ],
   },
