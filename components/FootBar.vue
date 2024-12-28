@@ -1,8 +1,7 @@
 <template>
   <div class="keep-px-font keep-px-width" m-a flex="~ col" p="y-100 x-60" bg="#000" text="#fff" border="t-1 gray solid">
-    <!-- todo: 替换成logo -->
     <div flex="~ row" justify-between>
-      <span>AI Power</span>
+      <img h-50 src="~/assets/img/logo.png" />
       <div>
         <button font-bold><NuxtLink to="/home">首页</NuxtLink></button>
         <button font-bold mx-10><NuxtLink to="/contact">联系我们</NuxtLink></button>

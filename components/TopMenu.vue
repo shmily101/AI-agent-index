@@ -1,6 +1,6 @@
 <template>
   <nav flex justify-between items-center fixed top-0 left-0 p="x-80 y-10" w-screen bg-white z-1000 text="gray" class="keep-px-nav">
-    <img class="keep-px-logo" src="~/assets/svg/logo.svg" />
+    <img class="keep-px-logo" src="~/assets/img/logo.png" />
     <ul class="hidden lg:flex gap-40 justify-center items-center">
       <li hover:text-primary><NuxtLink to="/">首页</NuxtLink></li>
       <li hover:text-primary><NuxtLink to="/service">服务</NuxtLink></li>
@@ -105,7 +105,7 @@ onClickOutside(dropdown, () => {
 }
 
 .keep-px-logo {
-  width: 30px;
+  width: 107px;
   height: 30px;
 }
 
@@ -120,6 +120,10 @@ onClickOutside(dropdown, () => {
 @media (max-width: 1023px) {
   .keep-px-fixed {
     top: 30px;
+  }
+  .keep-px-logo {
+    width: 53px;
+    height: 15px;
   }
 }
 
