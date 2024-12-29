@@ -3,19 +3,19 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: ["@unocss/nuxt", "@vueuse/nuxt", "@nuxt/eslint"],
-  app: {
-    head: {
-      link: [
-        {
-          rel: "preload",
-          href: "/fonts/AlibabaPuHuiTi-3-55-Regular.woff2",
-          crossorigin: "anonymous",
-          as: "font",
-          type: "font/woff2",
-        },
-      ],
-    },
-  },
+  // app: {
+  //   head: {
+  //     link: [
+  //       {
+  //         rel: "preload",
+  //         href: "/fonts/AlibabaPuHuiTi-3-55-Regular.woff2",
+  //         crossorigin: "anonymous",
+  //         as: "font",
+  //         type: "font/woff2",
+  //       },
+  //     ],
+  //   },
+  // },
   devServer: {
     port: 8080,
   },

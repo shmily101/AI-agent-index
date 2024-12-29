@@ -4,13 +4,14 @@ import '@unocss/reset/tailwind.css'
 </script>
 
 <style>
-@font-face {
+/* @font-face {
   font-family: AliRegular;
   src: url('/fonts/AlibabaPuHuiTi-3-55-Regular.woff2');
-}
+} */
 
 html {
-  font-family: AliRegular, sans-serif;
+  /* font-family: AliRegular, sans-serif; */
+  font-family: sans-serif;
 }
 
 input:focus,
