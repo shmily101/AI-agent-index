@@ -6,7 +6,7 @@ import '@unocss/reset/tailwind.css'
 <style>
 @font-face {
   font-family: AliRegular;
-  src: url('fonts/AlibabaPuHuiTi-3-55-Regular.woff2');
+  src: url('/fonts/AlibabaPuHuiTi-3-55-Regular.woff2');
 }
 
 html {

@@ -137,7 +137,7 @@ const aiServiceList = [
   {
     title: '专业咨询',
     content: '根据您的业务需求提供咨询解决方案，专家顾问提供指导，帮助您就生成式人工智能计划做出明智的决策。',
-    img: '/img/service-s2-01.png',
+    img: '/img/service-s2-01.jpg',
   },
   {
     title: '设计和优化AI模型提示词',

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "preload",
-          href: "/_nuxt/assets/fonts/AlibabaPuHuiTi-3-55-Regular.woff2",
+          href: "/fonts/AlibabaPuHuiTi-3-55-Regular.woff2",
           crossorigin: "anonymous",
           as: "font",
           type: "font/woff2",
