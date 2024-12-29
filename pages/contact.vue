@@ -1,5 +1,5 @@
 <template>
-  <section w-screen p="y-105 x-200" flex items-center gap-100 class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover keep-px-height">
+  <section w-screen p="y-105 x-200" flex items-center gap-100 class="bg-[url('/img/service-s3-bg.png')] bg-cover keep-px-height">
     <div text="48 gray" mb-200>
       <p>联系我们，</p>
       <p>

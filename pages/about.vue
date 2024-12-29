@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="bg-[url('~/assets/img/about-s1-bg.png')]" bg-cover w-1922 h-1000 p="y-140 x-200" relative>
+    <section class="bg-[url('/img/about-s1-bg.png')]" bg-cover w-1922 h-1000 p="y-140 x-200" relative>
       <div>
         <div bg="#000" w-117 h-5></div>
         <h1 text="20 #4c4c4c" mt-10>关于灵创</h1>

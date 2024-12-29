@@ -77,7 +77,7 @@
         </li>
       </ul>
     </section>
-    <section p="y-200 x-100" text-gray flex="~ col" items-center class="bg-[url('~/assets/img/service-s3-bg.png')] bg-cover">
+    <section p="y-200 x-100" text-gray flex="~ col" items-center class="bg-[url('/img/service-s3-bg.png')] bg-cover">
       <h1 class="fade-trigger" data-hook="90%" text="48" font="300 sans" mb-120>提示工程服务的优势</h1>
       <ul class="fade-trigger" grid="~ cols-3 rows-2" gap="x-200 y-100" w-full>
         <li v-for="(item, index) in advantagesList" :key="index" flex="~ col" items-center text-center>
@@ -93,35 +93,35 @@
       <h1 class="fade-trigger" data-hook="90%" text="48 gray" font="300 sans" mb-100>我们的服务流程</h1>
       <ul w-full flex="~ col" items-center text-20>
         <li class="step-item" relative>
-          <img class="step-img" w-420 op-0 src="~/assets/img/service-s4-01.png" alt="" />
+          <img class="step-img" w-420 op-0 src="~/public/img/service-s4-01.png" alt="" />
           <div class="step-info" absolute top-20 left-350 flex items-center gap-12 op-0>
             <hr border-none w-150 h-1 bg="#808080" />
             <span w-400>了解客户项目需求及目标</span>
           </div>
         </li>
         <li class="step-item" mr-300 relative>
-          <img class="step-img" w-420 op-0 src="~/assets/img/service-s4-02.png" alt="" />
+          <img class="step-img" w-420 op-0 src="~/public/img/service-s4-02.png" alt="" />
           <div class="step-info" absolute top-10 op-0 left="-400" flex items-center gap-12>
             <span w-300 text-center>根据客户需求，<br />确定最合适的AI模型或框架</span>
             <hr border-none w-170 h-1 bg="#808080" />
           </div>
         </li>
         <li class="step-item" ml-100 relative>
-          <img class="step-img" w-420 op-0 src="~/assets/img/service-s4-03.png" alt="" />
+          <img class="step-img" w-420 op-0 src="~/public/img/service-s4-03.png" alt="" />
           <div class="step-info" absolute top-20 left-350 flex op-0 items-center gap-12>
             <hr border-none w-150 h-1 bg="#808080" />
             <span w-350 text-center>Prompt工程师<br />设计符合客户使用情况的定制agent</span>
           </div>
         </li>
         <li class="step-item" mr-200 relative>
-          <img class="step-img" w-420 op-0 src="~/assets/img/service-s4-04.png" alt="" />
+          <img class="step-img" w-420 op-0 src="~/public/img/service-s4-04.png" alt="" />
           <div class="step-info" absolute top-10 left="-400" op-0 flex items-center gap-12>
             <span w-280 text-center>使用客户的数据微调 AI 模型，<br />以优化性能和准确性</span>
             <hr border-none w-170 h-1 bg="#808080" />
           </div>
         </li>
         <li class="step-item" ml-100 relative>
-          <img class="step-img" w-420 op-0 src="~/assets/img/service-s4-05.png" alt="" />
+          <img class="step-img" w-420 op-0 src="~/public/img/service-s4-05.png" alt="" />
           <div class="step-info" op-0 absolute top-20 left-350 flex items-center gap-12>
             <hr border-none w-150 h-1 bg="#808080" />
             <span w-300 text-center>测试和验证AI模型，<br />以确保它们满足客户需求及期望</span>
@@ -137,64 +137,64 @@ const aiServiceList = [
   {
     title: '专业咨询',
     content: '根据您的业务需求提供咨询解决方案，专家顾问提供指导，帮助您就生成式人工智能计划做出明智的决策。',
-    img: '_nuxt/assets/img/service-s2-01.png',
+    img: '/img/service-s2-01.png',
   },
   {
     title: '设计和优化AI模型提示词',
     content: '设计提示和指令以提高AI模型性能和结果准确性。',
-    img: '_nuxt/assets/img/service-s2-02.png',
+    img: '/img/service-s2-02.png',
   },
   {
     title: 'NLP模型定制',
     content: '根据客户需求定制的自然语言处理模型，提升业务自动化。',
-    img: '_nuxt/assets/img/service-s2-03.jpg',
+    img: '/img/service-s2-03.jpg',
   },
   {
     title: 'AI系统集成',
     content: '从技术咨询到实施落地，确保AI系统与现有业务系统无缝集成。',
-    img: '_nuxt/assets/img/service-s2-04.jpg',
+    img: '/img/service-s2-04.jpg',
   },
   {
     title: '后续优化与维护',
     content: '为客户提供持续的系统监控、维护和优化服务。',
-    img: '_nuxt/assets/img/service-s2-05.jpeg',
+    img: '/img/service-s2-05.jpeg',
   },
   {
     title: '定制AI Agent',
     content: '根据客户需求定制AI Agent，提高业务效率。',
-    img: '_nuxt/assets/img/service-s2-06.jpg',
+    img: '/img/service-s2-06.jpg',
   },
 ]
 const advantagesList = [
   {
     title: '快速解决方案',
     content: '及时的工程师擅长快速理解和解决项目需求，</br>大大缩短开发周期和产品上市时间。',
-    img: '_nuxt/assets/svg/adv-logo1.svg',
+    img: '/svg/adv-logo1.svg',
   },
   {
     title: '经济高效的解决方案',
     content: '聘请一位反应敏捷的工程师可以大幅节省成本。</br>他们高效的工作方式确保资源得到最佳利用，</br>从而降低开发成本。',
-    img: '_nuxt/assets/svg/adv-logo2.svg',
+    img: '/svg/adv-logo2.svg',
   },
   {
     title: '提高生产力',
     content: '提示工程师专注于在紧迫的期限内交付高质量的工作，</br>从而提高整个团队的生产力。</br>他们高效而专注的方法确保项目顺利进展。',
-    img: '_nuxt/assets/svg/adv-logo3.svg',
+    img: '/svg/adv-logo3.svg',
   },
   {
     title: '改进的语言生成',
     content: '提示工程师可以提高语言生成的质量，</br>使人工智能聊天机器人更易于理解和更像人类。</br>通过聘请及时的工程师，</br>您可以确保创建能够轻松回答具有挑战性的查询的机器人。',
-    img: '_nuxt/assets/svg/adv-logo4.svg',
+    img: '/svg/adv-logo4.svg',
   },
   {
     title: '精密度和准确度',
     content: '精度是软件开发的关键，</br>而敏捷的工程师擅长提供准确的结果。</br>他们对细节的细致关注确保最终产品完美地满足要求，</br>从而提高客户满意度。',
-    img: '_nuxt/assets/svg/adv-logo5.svg',
+    img: '/svg/adv-logo5.svg',
   },
   {
     title: '个性化回复',
     content: '提示工程师开发了聊天机器人，</br>可根据每位访客的独特需求提供个性化响应。</br>这种定制增强了用户体验，使互动更加个性化和真实。',
-    img: '_nuxt/assets/svg/adv-logo6.svg',
+    img: '/svg/adv-logo6.svg',
   },
 ]
 

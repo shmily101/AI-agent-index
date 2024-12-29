@@ -2,7 +2,7 @@
   <div>
     <section id="section-agent" class="keep-px-height" h-auto bg="black cover" flex text-white items-center font-medium py-100 relative>
       <div class="section-wrapper" w-920 m="y-0 auto" flex="~ col" items-center transition="duration-1s delay-0.5s">
-        <img w-644 h-full max-w-50vh block src="~/assets/img/home-s1-bg.png" />
+        <img w-644 h-full max-w-50vh block src="~/public/img/home-s1-bg.png" />
         <div w-full flex="~ col" items-center justify-center relative z-20>
           <h1 class="section-agent-gradient section-name" font-extrabold text-72 tracking-wider mb-14 leading-tight transition-duration-1s op-0>Agent Power</h1>
           <p class="section-slogan" text-36 d="0 60px 0" transition="duration-0.5s delay-0.5s" op-0>通过AI驱动的定制解决方案，让您的业务智能化和高效化</p>
@@ -12,7 +12,7 @@
     </section>
 
     <section id="section-card" py-200 text-gray bg="#FAFAFC cover" relative>
-      <img src="@/assets/img/home-s2-bg.png" absolute top-0 left-0 />
+      <img src="~/public/img/home-s2-bg.png" absolute top-0 left-0 />
       <div m="y-0 auto" transition="duration-1s delay-0.5s" relative z-1>
         <div w-screen h-max flex="~ col" items-center>
           <h1 text-60 mb-14>定制化Agent服务</h1>
@@ -22,14 +22,14 @@
             <div transform="translate-x-100%">
               <div w-3675 transform="translate-x--100%">
                 <div id="section-scroll-card-top" flex class="section-picture">
-                  <img v-for="index in topImages" :key="index" class="lazyload" :src="`_nuxt/assets/img/home-s2-card-0${index}.png`" alt="" />
+                  <img v-for="index in topImages" :key="index" class="lazyload" :src="`img/home-s2-card-0${index}.png`" alt="" />
                 </div>
               </div>
             </div>
             <div mt-24>
               <div w-3675>
                 <div id="section-scroll-card-bottom" flex class="section-picture">
-                  <img v-for="index in bottomImages" :key="index" class="lazyload" :src="`_nuxt/assets/img/home-s2-card-0${index}.png`" alt="" />
+                  <img v-for="index in bottomImages" :key="index" class="lazyload" :src="`img/home-s2-card-0${index}.png`" alt="" />
                 </div>
               </div>
             </div>
@@ -44,7 +44,7 @@
         <h2 text-50 font-medium>技术领先</h2>
         <p ml-104 lh-normal text="18 #808080">依托最前沿的自然语言处理与大型语言模型技术，我们确保每个项目<br />的技术先进性。</p>
       </div>
-      <img class="fade-trigger" data-hook="95%" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-01-poster.png" />
+      <img class="fade-trigger" data-hook="95%" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/public/img/home-s3-01-poster.png" />
     </section>
 
     <section id="section-us-two" bg="#FAFAFC cover" flex="~ col" text-gray items-center pt-200>
@@ -52,7 +52,7 @@
         <h2 text-50 font-medium>深度定制</h2>
         <p ml-104 lh-normal text="18 #808080">我们根据客户的具体需求量身定制解决方案，确保与业务目标紧密<br />契合。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-02-poster.png" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/public/img/home-s3-02-poster.png" />
     </section>
 
     <section id="section-us-three" bg="#FAFAFC cover" flex="~ col" text-gray items-center pt-200>
@@ -60,7 +60,7 @@
         <h2 text-50 font-medium>全流程支持</h2>
         <p ml-104 lh-normal text="18 #808080">从概念设计、开发、到后续的维护与优化，我们提供全流程的支持<br />服务，确保您的AI系统长期稳定高效运行。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-03-poster.png" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/public/img/home-s3-03-poster.png" />
     </section>
 
     <section id="section-us-four" bg="#FAFAFC cover" flex="~ col" text-gray items-center py-200>
@@ -68,7 +68,7 @@
         <h2 text-50 font-medium>业务增长驱动</h2>
         <p ml-104 lh-normal text="18 #808080">通过智能化解决方案，帮助您提升业务效率、降低成本，并<br />增强市场竞争力。</p>
       </div>
-      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/assets/img/home-s3-04-poster.png" />
+      <img class="fade-trigger" w-1235 h-600 mx-auto mt-30 border-rd-30px src="~/public/img/home-s3-04-poster.png" />
     </section>
 
     <section id="section-FAQ" bg="#000" p="t-50 x-50">
@@ -95,7 +95,7 @@
     </section>
 
     <section id="section-user" w-screen relative bg="black cover" py-200>
-      <img w-screen block src="~/assets/img/home-s8-bg.png" />
+      <img w-screen block src="~/public/img/home-s8-bg.png" />
       <div flex="~ col" w-screen tracking-wide items-center absolute left="50%" top="50%" transform="translate-y--50% translate-x--50%" text="white 62">
         <p id="text-one" />
         <p id="text-two" mt-15 />
