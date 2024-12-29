@@ -9,12 +9,12 @@
       </div>
     </div>
     <div flex="~ col" text-align-center text="#ccc" mt-60 gap-10>
-      <span>© AI Power. All rights reserved</span>
-      <span>湘ICP备2022004213号-2</span>
+      <span>© 灵创科技. All rights reserved</span>
+      <!-- <span>湘ICP备2022004213号-2</span>
       <span class="hidden lg:flex"
         >When you visit or interact with our sites, services or tools, we or our authorised service providers may use cookies for storing information to help provide you with a better, faster and safer experience and for marketing
         purposes.</span
-      >
+      > -->
     </div>
   </div>
 </template>
